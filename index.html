@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="topbar">
+        <nav>
+            <ul>
+                <li><p class="name">M.Inshal Farid</p></li>
+                <li><a href="#home">// home</a></li>
+                <li><a href="#about">// about me</a></li>
+                <li><a href="#projects">// projects</a></li>
+                <li><a href="#contact">// contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <section id="home">
+        <div class="text-content">
+            <h1>MUHAMMAD INSHAL FARID</h1>
+            <p>Computer Science Student aspiring to become a Cybersecurity Specialist.</p>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-content">
+            <div class="text">
+                <h2>About Me</h2>
+                <p>Your introduction text goes here.</p>
+            </div>
+            <img src="Images/me3.jpg" alt="profile-image" class="home-image">
+        </div>
+        <div class="buttons">
+            <button class="toggle-button" data-target="skills">Skills</button>
+            <button class="toggle-button" data-target="education">Education</button>
+            
+            <ul class="hidden-list" id="game-results">
+                <!-- Game results will be displayed here -->
+            </ul>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="project-header">
+            <h2>Projects</h2>
+            <div class="project-buttons">
+                <button class="toggle-button active">All</button>
+                <button class="toggle-button">Security</button>
+                <button class="toggle-button">Games</button>
+                <button class="toggle-button">Random</button>
+            </div>
+        </div>
+    
+        <!-- Add images and descriptions here -->
+        <div class="projects-container">
+            <!-- First Project -->
+            <div class="project">
+                <img src="Images/flag.jpeg" alt="Flag Project">
+                <div class="description">
+                    <h3>Capture the Flag</h3>
+                    <!--<p>Description of the Flag Project.</p>-->
+                </div>
+            </div>
+    
+            <!-- Second Project -->
+            <div class="project">
+                <img src="Images/codewall.jpg" alt="CodeWall Project">
+                <div class="description">
+                    <h3>CodeWall Project</h3>
+                    <!--<p>Description of the CodeWall Project.</p>-->
+                </div>
+            </div>
+        </div>
+    
+        <!-- Insert the Background Code image separately -->
+        <div class="background-code">
+            <img src="Images/backgroundcode.png" alt="Background Code" id="background-code">
+        </div>
+    </section>
+    
+
+    <section id="contact">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Contact Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula elit ut urna consectetur, eget efficitur ligula dignissim.</p>
+                <div class="contact-icons">
+                    <a href="https://github.com/Crazygamerxs" target="_blank">
+                        <img src="Images/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage&_ga=2.171250339.2032586123.1692722709-466643648.1687026616" target="_blank">
+                        <img src="Images/linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/ii.inshal.ii/" target="_blank">
+                        <img src="Images/instagram-icon.png" alt="Instagram">
+                    </a>
+                </div>
+                <a href="documents/resume.pdf" download class="download-button">Download Resume</a>
+            </div>
+            <div class="contact-form">
+                <form action="process_contact.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
