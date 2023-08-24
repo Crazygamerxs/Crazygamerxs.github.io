@@ -31,7 +31,7 @@ window.onscroll = function() {
     prevScrollPos = currentScrollPos;
 };
 // for the contact me 
-document.addEventListener("DOMContentLoaded", function () {
+/* document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent the default form submission
@@ -60,9 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("An error occurred while sending the message.");
         });
     });
-});
+}); */
 
-
+/*
 // for the game
 // Define an array of incident scenarios
 const scenarios = [
@@ -100,3 +100,4 @@ document.getElementById("start-game").addEventListener("click", function () {
         playScenario(i);
     }
 });
+*/
