@@ -20,33 +20,61 @@
     </div>
     </header>
 
+     <!--------- Home ---------->
     <section id="home">
         <div class="text-content">
             <h1>MUHAMMAD INSHAL FARID</h1>
             <p>Computer Science Student aspiring to become a Cybersecurity Specialist.</p>
         </div>
     </section>
+
+
+     <!--------- About Content ---------->
     <section id="about">
         <div class="about-content">
             <div class="text">
                 <h2>About Me</h2>
-                <p>Your introduction text goes here.</p>
+                <p>Hi, I'm Muhammad Inshal  Farid. I am a dedicated computer science student with a profound passion for coding 
+                   and software development. Alongside my academic pursuits, I immerse myself in the world
+                   of technology by creating small-scale video games and indulging in the art of coding.
+                   When not immersed in code, you can often find me exploring virtual realms through games
+                   like Minecraft and Terraria. In my leisure time, I also enjoy reading manga, which adds a creative 
+                   and imaginative dimension to my life.</p>
             </div>
             <img src="Images/me3.jpg" alt="profile-image" class="home-image">
         </div>
         <div class="buttons">
             <button class="toggle-button" data-target="skills">Skills</button>
             <button class="toggle-button" data-target="education">Education</button>
-            
-            <ul class="hidden-list" id="game-results">
-                <!-- Game results will be displayed here -->
+        </div>
+        <div class="hidden-list-container">
+            <ul class="hidden-list" id="skills-list">
+                <li>C/C++</li>
+                <li>Embedded system</li>
+                <li>Python</li>
+                <!-- Add more skills as needed -->
+            </ul>
+            <ul class="hidden-list" id="education-list">
+                <li>Conestoga College - Waterloo,ON<br>
+                    Bachelors of Computer Science (honours) - 2023 - 2026
+                </li>
+                <li>Pakistan Islamia Higher Secondary School<br>
+                    High School - 2020 - 2022
+                </li>
+                <li>
+                    Pakistan Islamia Higher Secondary School<br>
+                    Middle School - 2018 - 2020
+                </li>
             </ul>
         </div>
     </section>
     
+    
+    <!--------- My Projects ---------->
+    
     <section id="projects">
         <div class="project-header">
-            <h2>Projects</h2>
+            <h2>My Projects</h2>
             <div class="project-buttons">
                 <button class="toggle-button active">All</button>
                 <button class="toggle-button">Security</button>
@@ -55,27 +83,27 @@
             </div>
         </div>
     
-        <!-- Add images and descriptions here -->
         <div class="projects-container">
             <!-- First Project -->
             <div class="project">
-                <img src="Images/flag.jpeg" alt="Flag Project">
-                <div class="description">
-                    <h3>Capture the Flag</h3>
-                    <!--<p>Description of the Flag Project.</p>-->
+                <img src="Images/laptopbackground.jpg" alt="Flag Project">
+                <div class="content project1-content"> <!-- Unique class for the first project -->
+                    <h3>Portfolio Website</h3>
+                    <p>- This is my personal portfolio website showcasing my projects and skills.</p>
                 </div>
             </div>
-    
+        
             <!-- Second Project -->
             <div class="project">
-                <img src="Images/codewall.jpg" alt="CodeWall Project">
-                <div class="description">
-                    <h3>CodeWall Project</h3>
-                    <!--<p>Description of the CodeWall Project.</p>-->
+                <img src="Images/file_encrption.png" alt="CodeWall Project">
+                <div class="content project2-content"> <!-- Unique class for the second project -->
+                    <h3>File Encryption & Decryption</h3>
+                    <p>- A command-line tool for encrypting and decrypting files securely.</p>
                 </div>
             </div>
         </div>
-    
+        
+        
         <!-- Insert the Background Code image separately -->
         <div class="background-code">
             <img src="Images/backgroundcode.png" alt="Background Code" id="background-code">
@@ -83,74 +111,73 @@
     </section>
     
 
+     <!--------- Contact ---------->
     <section id="contact">
         <div class="contact-content">
             <div class="contact-info">
                 <h2>Contact Me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula elit ut urna consectetur, eget efficitur ligula dignissim.</p>
+                <p>Have an exciting project you need help with?
+                    Send me an email or contact me via instant message!</p>
+                    <a href="mailto:m.inshalfarid@gmail.com" class="email-link">m.inshalfarid@gmail.com</a>
                 <div class="contact-icons">
                     <a href="https://github.com/Crazygamerxs" target="_blank">
                         <img src="Images/github.png" alt="GitHub">
                     </a>
                     <a href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage&_ga=2.171250339.2032586123.1692722709-466643648.1687026616" target="_blank">
-                        <img src="Images/linkedin-icon.png" alt="LinkedIn">
+                        <img src="Images/linkedin.png" alt="LinkedIn">
                     </a>
                     <a href="https://www.instagram.com/ii.inshal.ii/" target="_blank">
-                        <img src="Images/instagram-icon.png" alt="Instagram">
+                        <img src="Images/instag.png" alt="Instagram">
                     </a>
                 </div>
                 <a href="documents/resume.pdf" download class="download-button">Download Resume</a>
             </div>
+            
+
+        <!-- Add a <form> element with the name "submit-to-google-sheet" -->
+            <form id="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbwcGUIlJqSD_K7ecd-9fVfvI42Sa-vYrwXgdTsFuj3cTez3N6o4xM9mDHBOpGB5rLYg/exec" method="POST">
             <div class="contact-form">
-                <form action="process_contact.php" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-    
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" required>
-    
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-    
-                    <button type="submit">Send Message</button>
-                </form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
             </div>
-        </div>
+        </form>
+    </div>
+
+
+<!-- Add an empty paragraph with the id "msg" to display the success message -->
+<p id="msg"></p>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwcGUIlJqSD_K7ecd-9fVfvI42Sa-vYrwXgdTsFuj3cTez3N6o4xM9mDHBOpGB5rLYg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = "Message sent successfully."
+                setTimeout(function () {
+                    msg.innerHTML = ""
+                }, 2000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+    </script>
     </section>
     
-    <script src="script.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("form");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-    fetch('https://script.google.com/macros/s/AKfycbzmJmznxdGytfPUjhcywQvdBsW7CjgO4TjdF2Z3DBa_mbzBvXw5KXfCovVbE5wv1ypWeQ/exec', {
-      method: 'POST',
-      body: JSON.stringify(Object.fromEntries(formData)),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((response) => response.text())
-      .then((message) => {
-        const msgElement = document.getElementById('msg');
-        msgElement.textContent = message;
-        setTimeout(function () {
-          msgElement.textContent = '';
-        }, 2000);
-        form.reset();
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-  });
-});
-
-      </script>
-      
+    <script src="script.js"></script>    
 </body>
 </html>
