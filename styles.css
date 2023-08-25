@@ -1,0 +1,614 @@
+/* Style the Home section */
+#home {
+    background-image: url('Images/laptopbackground.jpg'); /* Replace 'laptopbackground.jpg' with your image file path */
+    background-size:cover; /* Cover the entire page */
+    background-position: center center; /* Center the background image */
+    text-align: center;
+    padding: 100px 0; /* Increase the padding for more height */
+    color: #fff; /* Set text color to white for better visibility */
+    margin: 0; /* Remove any margin */
+    height: 100vh; /* Make the section fill the viewport height */
+}
+
+
+#home h1 {
+    font-size: 48px; 
+    color: #fff;
+}
+
+#home p {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Style the text at home page */
+#home .text-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 30px; /* Adjust the value to control the vertical positioning */
+    color: #fff;
+}
+
+#home .text-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#home .text-content p {
+    font-size: 20px;
+}
+
+/* Add a border to images in the home section */
+.home-image {
+    border-radius: 20px /*solid #fff*/; /* Add a 2px white border */
+    height: 600px;
+    width:auto;
+    align-self: self-end;
+    margin-right: -300px;
+}
+
+
+/* Style the About Me section */
+#about {
+    background-color: #000;
+    padding: 50px 0;
+    position: relative;
+}
+
+#about .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start; /* Adjusted to place content on the left side */
+    justify-content: space-between; /* Adjusted to place content on the right and left */
+}
+
+#about .profile-image {
+    width: 325px;
+    margin-left: -200px; /* Adjusted to remove margin from the left side */
+    margin-right: -150px; /* Adjusted to create space between the image and text */
+}
+
+#about .text {
+    flex-grow: 1;
+    color: #fff;
+    text-align: left; /* Adjusted to align text content to the left */
+}
+
+#about h2 {
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: left; /* Adjusted to align header to the left */
+    margin-left: -200px;
+    margin-top: -10px;
+}
+
+
+#about p {
+    font-size: 24px;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left; /* Adjusted to align text content to the left */
+    margin-left: -200px;
+}
+
+.toggle-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between button containers */
+}
+
+.hidden-list.show-list {
+    display: block !important;
+}
+
+.hidden-list {
+    display: none;
+    padding: 0;
+    margin: 0;
+    color: rgb(254, 254, 254);
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    margin-top: -225px;
+    margin-left: 150px;
+    
+}
+
+.hidden-list li {
+    padding: 5px 0;
+    margin: 2px 0;
+    list-style-type: none; /* Remove bullet points */
+    border-left: 3px solid #007BFF; /* Add a left border for list items */
+    padding-left: 10px; /* Add some padding to the left of list items */
+}
+
+/* Style for the multiline list items */
+.hidden-list li br {
+    display: block;
+}
+
+
+
+/* Style the buttons */
+.buttons {
+    display: flex;
+    flex-direction: row; /* Adjusted to place buttons side by side */
+    align-items: center; /* Adjusted to align buttons vertically in the middle */
+    margin-top: 40px;
+    position: relative; /* Removed absolute positioning */
+    justify-content: center; /* Adjusted to center buttons horizontally */
+    transform: translate(-32%, -700%); 
+    margin-left: 20px;
+}
+
+.toggle-button {
+    background-color: #000 ;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px; /* Added margin-right to create spacing between buttons */
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-button:hover {
+    background-color: #ff9900;
+}
+
+.toggle-button:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #007BFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.toggle-button:hover:after {
+    transform: scaleX(1);
+}
+
+
+/* Show the list when the button is clicked */
+.toggle-button.active + ul {
+    display: block;
+}
+
+
+/* Style the Projects section */
+#projects {
+    background-color: #000;
+    color:#fff;
+    padding: 80px 0;
+    height: 60hv;
+}
+
+#projects h2 {
+    font-size:  70px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: +160px;
+    margin-top: auto;
+}
+/* Style the project header */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-header h2 {
+    font-size: 60px;
+    color: #fff;
+    margin: 0;
+    text-align: left;
+}
+
+/* Style the project buttons */
+.project-buttons {
+    background-color: #000;
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    align-items: center;
+    margin-right: 400px; /* Removed the '+' sign */
+    margin-top: 20px; /* Added margin-top for spacing */
+}
+
+.project-buttons .toggle-button {
+    background-color: #000; /* Corrected the background color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.project-buttons .toggle-button:hover {
+    background-color: #ff9900; /* Change color on hover if needed */
+}
+
+
+/* Style the project container */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows projects to wrap to the next line if the screen width is not enough */
+    justify-content: space-between; /* Distributes projects evenly */
+    margin-top: 20px;
+}
+
+/* Style individual projects */
+.project {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Required for positioning the description */
+}
+
+/* Add rounded corners to project images */
+.project img {
+    border-radius: 20px; /* Add rounded corners */
+}
+
+.project img:hover {
+    transform: scale(1.05); /* Zoom in by 5% on hover */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+
+.project-description p {
+    font-size: 16px;
+    color: #333; /* Text color for the description */
+    margin: 0;
+}
+
+
+/* Adjust the position of the first project's image */
+.project:nth-child(1) img {
+    max-width: 600px;
+    height: 400px;
+    margin-left: +350px; /* Adjust the right margin as needed */
+    margin-top: 50px; /* Adjust the top margin as needed */
+}
+
+/* Adjust the position of the second project's image */
+.project:nth-child(2) img {
+    max-width: 600px;
+    height: 400px;
+    margin-right: +300px; /* Adjust the right margin as needed */
+    margin-top: 50px; /* Adjust the top margin as needed */
+}
+
+/* Style the first project */
+.project:nth-child(1) .description {
+    /* Custom styles for the first project */
+    margin-top: 5px;
+    margin-left: 300px;
+}
+
+/* Style the second project */
+.project:nth-child(2) .description {
+    /* Custom styles for the second project */
+    margin-top: 5px;
+    margin-right: 300px;
+}
+
+.project h3 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+    margin-top: 10px; /* Add space between the image and title */
+}
+
+.project p {
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Style the content section for the first project */
+.project1-content {
+    background-color: #0d0d0d; 
+    padding: 20px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    /* Adjust the position and size for the first project */
+    position: relative;
+    top: -100px;
+    left: 180px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Style the content section for the second project */
+.project2-content {
+    background-color: #0d0d0d; 
+    padding: 25px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    /* Adjust the position and size for the second project */
+    position: relative;
+    top: -80px; /* Example: Move it down further for the second project */
+    right: 144px; /* Example: Move it right further for the second project */
+    width: 70%; /* Example: Make it narrower for the second project */
+    margin: 0 auto;
+}
+
+
+
+
+/* Style the background code image and apply an overlay */
+#background-code {
+    max-width: 70%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    position: relative; /* Required for the overlay */
+    filter: brightness(30%); /* Adjust the brightness (70% in this example) */
+    margin-top: -20px;
+}
+
+/* Add a semi-transparent overlay */
+#background-code::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Increase the opacity (0.5 in this example) */
+    z-index: 1; /* Ensure the overlay is above the image */
+}
+
+/* Reset margin and padding for the body element */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the top bar */
+.topbar {
+    height: 80px; /* Adjust the height as needed */
+    background-color: #141414;
+    color: #fff;
+    /* padding: 15px 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+}
+
+.topbar .name {
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 400px;
+    font-size: 32px;
+    color: #fff; /* Blueish color for your name */
+}
+
+.topbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.topbar li {
+    margin-left: 60px;
+}
+
+.topbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight:bold;
+    font-size: 18px;
+}
+
+/* Move menu items to the left side of the menu */
+.topbar ul {
+    margin-left: 60px;
+}
+
+
+/* Style the Contact Me section */
+#contact {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+   
+}
+
+#contact .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Style the contact info on the left */
+#contact .contact-info {
+    width: 30%; /* Adjust the width as needed */
+    text-align: left;
+}
+
+#contact .contact-info h2 {
+    font-size:  70px;
+    margin-bottom: 20px;
+    color: #fff;
+    margin-left:30px;
+    margin-top: 100px;
+}
+
+#contact .contact-info p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    margin-left:30px;
+}
+
+#contact .contact-icons {
+    display: flex;
+    flex-direction: row; /* Stack social icons vertically */
+    align-items: flex-start; /* Align social icons to the left */
+    margin-top: 150px; /* Add space between info and social icons */
+}
+
+
+#contact .contact-icons a {
+    margin: 10px 0; /* Adjust spacing between social icons */
+}
+
+
+#contact .contact-form {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    text-align: left;
+    margin-top: 120px; 
+    margin-right: 400px;
+}
+
+
+#contact .contact-form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #fff;
+    margin-left: -100px;
+
+}
+
+#contact .contact-form input[type="text"],
+#contact .contact-form input[type="email"],
+#contact .contact-form textarea {
+    width: 100%; /* Make input fields full width */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-left: -100px;
+    border-radius: 10px; /* Add rounded corners */
+   
+}
+
+#contact .contact-form textarea {
+    resize: vertical;
+    height: 150px; /* Adjust the height of the textarea as needed */
+}
+
+/* Move the "Send Message" button underneath the contact form */
+#contact .contact-form button[type="submit"] {
+    width: 100%; /* Make the button full width */
+    height: 50px;
+    margin-top: 70px; /* Add space between contact form and button */
+    margin-right: 0; /* Remove right margin */
+    background-color: #2f2f2f;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    border:none;
+    margin-left: -100px;
+    margin-top: -10px;
+}
+
+#contact .contact-form button[type="submit"]:hover {
+    background-color: #ff9900;
+}
+
+/* Style the download button */
+#contact .download-button {
+    background-color: #2f2f2f;
+    color: #fff;
+    border: none;
+    width: 40%;
+    height: 100%;
+    padding: 8px 5px; /* Adjust padding to make the button smaller */
+    cursor: pointer;
+    font-size: 18px; /* Adjust font size to make the button smaller */
+    text-decoration: none;
+    display: block;
+    margin-top: 20px; /* Add space between social icons and button */
+    margin-left: 30px;
+    /* Center text vertically and horizontally */
+    line-height: 30px; /* Adjust line-height to vertically center the text */
+    text-align: center; /* Center text horizontally */
+}
+
+
+#contact .download-button:hover {
+    background-color: #ff9900;
+}
+
+#contact .contact-icons img {
+    width: 30px; /* Adjust the icon size as needed */
+    height: 30px; /* Adjust the icon size as needed */
+    margin: 0 10px;
+    border-radius: 50%; /* Round the icons */
+    margin-left: 30px;
+}
+
+
+/* Style the email link */
+.email-link {
+    text-decoration: none; /* Remove the default underline */
+    color: white; /* Set the text color to white */
+    position: relative; /* Create a relative positioning context for the pseudo-element */
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+/* Style the email link on hover */
+.email-link:hover {
+    text-decoration: none; /* Remove the underline on hover */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+/* Add a blue line underneath the email link */
+.email-link::before {
+    content: ''; /* Add content to create a pseudo-element */
+    position: absolute; /* Position the pseudo-element */
+    bottom: -2px; /* Position it 2 pixels below the text */
+    left: 0; /* Align it with the left edge of the link */
+    width: 100%; /* Make it extend the full width of the link */
+    height: 2px; /* Set the height of the line */
+    background-color: blue; /* Set the background color of the line to blue */
+    transform: scaleX(0); /* Initially, hide the line by scaling it to 0 */
+    transform-origin: left; /* Set the transform origin to the left */
+    transition: transform 0.3s ease; /* Add a transition effect to the transform property */
+    
+}
+
+/* Expand the blue line on hover */
+.email-link:hover::before {
+    transform: scaleX(1); /* Scale the line to its full width on hover */
+    transform-origin: right; /* Change the transform origin to the right for expansion effect */
+    background-color: blue; /* Set the background color to blue on hover */
+}
+
