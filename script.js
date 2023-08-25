@@ -30,74 +30,30 @@ window.onscroll = function() {
 
     prevScrollPos = currentScrollPos;
 };
-// for the contact me 
-/* document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the default form submission
 
-        // Collect form data
-        const formData = new FormData(form);
+// Get references to the buttons and hidden lists
+const skillsButton = document.querySelector('[data-target="skills"]');
+const educationButton = document.querySelector('[data-target="education"]');
+const skillsList = document.getElementById('skills-list');
+const educationList = document.getElementById('education-list');
 
-        // Send the form data to the server for processing
-        fetch("send_email.php", {
-            method: "POST",
-            body: formData,
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                // Clear the form
-                form.reset();
-                // Display a success message
-                alert("Message sent successfully!");
-            } else {
-                alert("Message failed to send. Please try again later.");
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            alert("An error occurred while sending the message.");
-        });
-    });
-}); */
+// Initialize: Show the skills list by default
+skillsList.classList.add('show-list');
+educationList.classList.remove('show-list');
 
-/*
-// for the game
-// Define an array of incident scenarios
-const scenarios = [
-    {
-        description: "You receive an email with a suspicious attachment. What do you do?",
-        options: [
-            { text: "Open the attachment", result: "Malware infection! Take immediate action to isolate the system." },
-            { text: "Delete the email", result: "Safe choice. The potential threat is eliminated." }
-        ]
-    },
-    // Add more scenarios and options as needed
-];
+// Add click event listeners to the buttons
+skillsButton.addEventListener('click', toggleSkillsList);
+educationButton.addEventListener('click', toggleEducationList);
 
-// Function to display a scenario and receive user input
-function playScenario(scenarioIndex) {
-    const currentScenario = scenarios[scenarioIndex];
-    const userChoice = prompt(currentScenario.description + "\nOptions:\n1. " + currentScenario.options[0].text + "\n2. " + currentScenario.options[1].text);
-
-    if (userChoice === '1') {
-        const result = document.createElement("li");
-        result.textContent = currentScenario.options[0].result;
-        document.getElementById("game-results").appendChild(result);
-    } else if (userChoice === '2') {
-        const result = document.createElement("li");
-        result.textContent = currentScenario.options[1].result;
-        document.getElementById("game-results").appendChild(result);
-    } else {
-        alert("Invalid choice. Please select 1 or 2.");
-    }
+// Function to toggle the visibility of the skills list
+function toggleSkillsList() {
+    skillsList.classList.add('show-list');
+    educationList.classList.remove('show-list');
 }
 
-// Start the game when the button is clicked
-document.getElementById("start-game").addEventListener("click", function () {
-    for (let i = 0; i < scenarios.length; i++) {
-        playScenario(i);
-    }
-});
-*/
+// Function to toggle the visibility of the education list
+function toggleEducationList() {
+    educationList.classList.add('show-list');
+    skillsList.classList.remove('show-list');
+}
+
