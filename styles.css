@@ -269,11 +269,7 @@
 }
 
 
-.project-description p {
-    font-size: 16px;
-    color: #333; /* Text color for the description */
-    margin: 0;
-}
+
 
 
 /* Adjust the position of the first project's image */
@@ -286,6 +282,22 @@
 
 /* Adjust the position of the second project's image */
 .project:nth-child(2) img {
+    max-width: 600px;
+    height: 400px;
+    margin-right: +300px; /* Adjust the right margin as needed */
+    margin-top: 50px; /* Adjust the top margin as needed */
+}
+
+/* Adjust the position of the first project's image */
+.project:nth-child(3) img {
+    max-width: 600px;
+    height: 400px;
+    margin-left: +350px; /* Adjust the right margin as needed */
+    margin-top: 50px; /* Adjust the top margin as needed */
+}
+
+/* Adjust the position of the second project's image */
+.project:nth-child(4) img {
     max-width: 600px;
     height: 400px;
     margin-right: +300px; /* Adjust the right margin as needed */
@@ -306,6 +318,19 @@
     margin-right: 300px;
 }
 
+/* Style the first project */
+.project:nth-child(3) .description {
+    /* Custom styles for the first project */
+    margin-top: 5px;
+    margin-left: 300px;
+}
+
+/* Style the second project */
+.project:nth-child(4) .description {
+    /* Custom styles for the second project */
+    margin-top: 5px;
+    margin-right: 300px;
+}
 .project h3 {
     font-size: 24px;
     margin: 0;
@@ -318,42 +343,6 @@
     margin: 0;
     text-align: center;
 }
-
-/* Style the content section for the first project */
-.project1-content {
-    background-color: #0d0d0d; 
-    padding: 20px;
-    text-align: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-
-    /* Adjust the position and size for the first project */
-    position: relative;
-    top: -100px;
-    left: 180px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-/* Style the content section for the second project */
-.project2-content {
-    background-color: #0d0d0d; 
-    padding: 25px;
-    text-align: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-
-    /* Adjust the position and size for the second project */
-    position: relative;
-    top: -80px; /* Example: Move it down further for the second project */
-    right: 144px; /* Example: Move it right further for the second project */
-    width: 70%; /* Example: Make it narrower for the second project */
-    margin: 0 auto;
-}
-
-
 
 
 /* Style the background code image and apply an overlay */
