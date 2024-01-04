@@ -57,3 +57,33 @@ function toggleEducationList() {
     skillsList.classList.remove('show-list');
 }
 
+// to filter the projects
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all project buttons and projects
+    const projectButtons = document.querySelectorAll('.toggle-button');
+    const projects = document.querySelectorAll('.project');
+
+    // Add click event listener to each button
+    projectButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const category = button.textContent.toLowerCase(); // Get the category from the button text
+
+            // Show or hide projects based on the selected category
+            projects.forEach(function (project) {
+                const projectCategory = project.getAttribute('data-category').toLowerCase();
+                if (category === 'all' || category === projectCategory) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+
+            // Toggle the 'active' class for styling
+            projectButtons.forEach(function (btn) {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+        });
+    });
+});
+
