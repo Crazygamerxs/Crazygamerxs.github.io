@@ -639,3 +639,20 @@ body {
 }
 
 
+/*Experience Section */
+/* Experiences Section */
+#experiences {
+    background-color: #000000;
+    color: #fff;
+    padding: 80px 0;
+}
+
+#experiences h2 {
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: +160px;
+    margin-top: auto;
+    font-family: comic sans ms;
+}
