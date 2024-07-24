@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-page {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* First and third columns are 1fr, second column is 2fr */
+    grid-template-rows: repeat(4, 1fr); /* Four rows, each 1fr tall */
+    gap: 15px;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+ 
+  
+  .block {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    /* add a curve to the edges */
+    border-radius: 16px;
+  }
+  
+  .profile {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .updates {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  .job-status {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    height: 60%;
+  }
+  
+  .projects {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    /* takes half the space in the first column */
+    width: 40%;
+    height: 80%;
+  }
+  
+  .fun-facts {
+
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  
+  .achievements {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  
+  .main-content {
+    grid-column: 2 / 3;
+    grid-row: 2 / 5;
+  }
+  
+  .map {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+  
+  .weather {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+  
+  .pic {
+    grid-column: 3  / 4;
+    grid-row: 4 / 5;
+    width: 40%;
+  }
+  
+  .another-pic {
+    grid-column: 3 / 4;
+    grid-row: 5 / 6;
+  }
+  
+  .fun-fact {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    width: 47%;
+    height: 150%;
+  }
+  
+  .social-icons {
+    grid-row: 5 / 6;
+    width: 90%;
+    margin-left: 208.5%;
+    height: 150%;
+  }
+  
+  .modes {
+    grid-column: 3 / 4;
+    grid-row: 6 / 7;
+  }
+  
