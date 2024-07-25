@@ -8,101 +8,204 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr; /* First and third columns are 1fr, second column is 2fr */
     grid-template-rows: repeat(4, 1fr); /* Four rows, each 1fr tall */
-    gap: 15px;
+    gap: 20px;
     height: 100vh;
-    padding: 10px;
+    padding: 25px;
     box-sizing: border-box;
   }
  
   
   .block {
-    background-color: #e0e0e0;
+    background-color: #F8F8F8;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     /* add a curve to the edges */
     border-radius: 16px;
+    position: relative; 
   }
+  
+  /* A flex column for the first column */
+  .first-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
+  }
+
+  /* A flex row at the start of a block */
+  .profile-1st-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
   
   .profile {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    height: 20%;
+    position: relative;
+  }
+
+  .profile-icon {
+    position: absolute; /* Position relative to the parent .block */
+    top: 23px; /* Distance from the top of the parent */
+    left: 25px; /* Distance from the left of the parent */
+    width: 40px; /* Diameter of the circle */
+    height: 40px; /* Diameter of the circle */
+    border-radius: 50%; /* Makes the element round */
+    overflow: hidden; /* Ensures that the image is clipped to the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  .updates {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+  .profile-icon img {
+    width: 100%; /* Ensures the image fills the container */
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: cover; /* Keeps the aspect ratio of the image */
   }
+
+  .profile-name {
+    font-weight: bold;
+    color: #272727;
+    font-size: 15px;
+    margin-bottom: 135px;
+    position: absolute; /* Position relative to the parent .block */
+}
+
   
   .job-status {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    height: 60%;
+    height: 15%;
+  }
+  .projects-fun-container {
+    display: flex;
+    flex-direction: row;
+    gap: 7%;
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
   }
   
+  .projects, .fun-facts {
+    flex: 1 1 40%;
+    /* Ensure each takes up 40% of the space in the flex container */
+  }
+
   .projects {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    /* takes half the space in the first column */
-    width: 40%;
-    height: 80%;
+    height: 210px;
   }
   
   .fun-facts {
-
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    height: 210px;
   }
   
   .achievements {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
+    height: 150px;
   }
   
+  /* A flex column for the second column */
+  .second-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 6;
+  }
+
+  .updates {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: 70px;
+  }
+
   .main-content {
     grid-column: 2 / 3;
     grid-row: 2 / 5;
+    height: 65%;
   }
   
+  .social-fun-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+  }
+  
+  .social-icons, .fun-fact {
+    flex: 1 1 40%;
+    /* Ensure each takes up 40% of the space in the flex container */
+    height: 80px;
+  }
+
+  .fun-fact {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+  }
+  
+  .social-icons {
+    grid-row: 5 / 6;    
+  }
+  
+
+  /* A flex column for the 3rd column */
+  .third-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 6;
+  }
+
+
   .map {
     grid-column: 3 / 4;
-    grid-row: 1 / 3;
+    grid-row: 1 / 2;
+    height: 30%;
   }
   
   .weather {
     grid-column: 3 / 4;
     grid-row: 3 / 4;
+    height: 8%;
+  }
+  
+  .pics-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+  }
+  
+  .pic, .another-pic {
+    flex: 1 1 40%;
+    /* Ensure each takes up 40% of the space in the flex container */
   }
   
   .pic {
-    grid-column: 3  / 4;
-    grid-row: 4 / 5;
-    width: 40%;
+    height: 260px;
   }
   
   .another-pic {
-    grid-column: 3 / 4;
-    grid-row: 5 / 6;
-  }
-  
-  .fun-fact {
-    grid-column: 2 / 3;
-    grid-row: 5 / 6;
-    width: 47%;
-    height: 150%;
-  }
-  
-  .social-icons {
-    grid-row: 5 / 6;
-    width: 90%;
-    margin-left: 208.5%;
-    height: 150%;
+    height: 260px;
   }
   
   .modes {
     grid-column: 3 / 4;
     grid-row: 6 / 7;
+    height: 50px;
   }
   
