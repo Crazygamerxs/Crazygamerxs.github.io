@@ -1,6 +1,8 @@
 import React from 'react';
 import './HomePage.css';
 import images from '../../images/index'; // Adjust the path as needed
+import Carousel from './main_content';
+
 
 const HomePage = () => {
   return (
@@ -51,15 +53,18 @@ const HomePage = () => {
           </div>
         </div>
         <div className="block achievements">
-          Achievements<br />Or Future Plans
+          Random Fun Facts
         </div>
       </div>
       <div className="second-column">
-        <div className="block updates">
-          Maybe the Menu can be here<br />Or Updates
+        <div className="block-updates">
+          <h5>
+            <span>Currently working on Tuxania</span>
+            <span style={{ marginTop: '-23px', marginLeft: '-20px' }}>Tuxania</span>
+          </h5>
         </div>
         <div className="block main-content">
-          rolling Images of different pics (projects, random ones too)
+          <Carousel />
         </div>
         <div className="social-fun-container">
           <div className="block fun-fact">
