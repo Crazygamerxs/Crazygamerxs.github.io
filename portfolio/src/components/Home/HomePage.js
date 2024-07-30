@@ -3,8 +3,12 @@ import './HomePage.css';
 import images from '../../images/index'; // Adjust the path as needed
 import ControlledCarousel from './main_content';
 import MapComponent from './map';
+// import ModeToggle from './modeToggle';
+import ImageSlider from './ImageSlider';
 
 const HomePage = () => {
+  
+
   return (
     <div className="home-page">
       <div className="first-column">
@@ -16,7 +20,6 @@ const HomePage = () => {
             <div className="profile-name">
               <h4>Muhammad Inshal Farid</h4>
               <h6>@Software Developer</h6>
-              
             </div>
             
             <div className="profile-linkedin-icon">
@@ -83,17 +86,20 @@ const HomePage = () => {
           weather
         </div>
         <div className='pics-container'>
-          <div className="block pic">
-            Pic of me
+          <div className="block-pic">
+            <img src={images.me} alt="Me" />
           </div>
-          <div className="block another-pic">
-            Another Pic of me, or something else like pics from different countries, I have been to
+          <div className="block-another-pic">
+            <div className="block-2nd-pic">
+              <ImageSlider />;
+            </div>
           </div>
         </div>
-        <div className="block modes">
-          Switching between different modes
+        <div className="block-modes">
+          Toggle between different modes
         </div>
       </div>
+      
       
     </div>
   );

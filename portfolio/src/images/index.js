@@ -15,6 +15,11 @@ import storm from './weather_icons/storm.png';
 import sun from './weather_icons/sun.png';
 import butterfly from './2nd_block/butterfly.jpg';
 import flower from './2nd_block/flower.jpg';
+import flowers from './2nd_block/flowers.jpg';
+import me from './me.jpg';
+import dark_mode from './dark_mode.png';
+import light_mode from './light_mode.png';
+
 
 const images = {
   pic,
@@ -34,6 +39,10 @@ const images = {
   sun,
   butterfly,
   flower,
+  flowers,
+  me,
+  dark_mode,
+  light_mode,
 };
 
 export default images;
