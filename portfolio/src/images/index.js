@@ -7,7 +7,14 @@ import right_arrow from './right_arrow.png';
 import ice_bear from './ice_bear.jpg';
 import nature from './nature.jpg';
 import kitty from './kitty.jpg';
-
+import map from './map.png';
+import cloudy from './weather_icons/cloudy.png';
+import rainy from './weather_icons/rainy.png';
+import snowy from './weather_icons/snowy.png';
+import storm from './weather_icons/storm.png';
+import sun from './weather_icons/sun.png';
+import butterfly from './2nd_block/butterfly.jpg';
+import flower from './2nd_block/flower.jpg';
 
 const images = {
   pic,
@@ -19,6 +26,14 @@ const images = {
   ice_bear,
   nature,
   kitty,
+  map,
+  cloudy,
+  rainy,
+  snowy,
+  storm,
+  sun,
+  butterfly,
+  flower,
 };
 
 export default images;

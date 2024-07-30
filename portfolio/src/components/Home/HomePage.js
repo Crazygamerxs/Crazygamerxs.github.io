@@ -1,8 +1,8 @@
 import React from 'react';
 import './HomePage.css';
 import images from '../../images/index'; // Adjust the path as needed
-import Carousel from './main_content';
-
+import ControlledCarousel from './main_content';
+import MapComponent from './map';
 
 const HomePage = () => {
   return (
@@ -63,12 +63,12 @@ const HomePage = () => {
             <span style={{ marginTop: '-23px', marginLeft: '-20px' }}>Tuxania</span>
           </h5>
         </div>
-        <div className="block main-content">
-          <Carousel />
+        <div className="block-main-content">
+          <ControlledCarousel />
         </div>
-        <div className="social-fun-container">
-          <div className="block fun-fact">
-          Random Fun Fact
+        <div className="social-game-container">
+          <div className="block game">
+          <button className="btn-12">Enjoy A Game</button>
           </div>
           <div className="block social-icons">
             Social Icons
@@ -76,11 +76,11 @@ const HomePage = () => {
         </div>
       </div>
       <div className='third-column'>
-        <div className="block map">
-          Map of Waterloo
+        <div className="block-map">
+          <MapComponent />
         </div>
-        <div className="block weather">
-          Weather and Time in Waterloo?
+        <div className="block-weather">
+          weather
         </div>
         <div className='pics-container'>
           <div className="block pic">

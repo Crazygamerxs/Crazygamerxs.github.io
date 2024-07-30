@@ -1,3 +1,6 @@
+@import url('https://unpkg.com/leaflet/dist/leaflet.css');
+
+
 body {
     margin: 0;
     overflow: hidden; /* Prevent scrolling */
@@ -27,6 +30,10 @@ body {
     position: relative; 
   }
   
+  
+  
+  /*----------------------------------------First Column----------------------------------------*/
+  
   /* A flex column for the first column */
   .first-column {
     display: flex;
@@ -35,11 +42,7 @@ body {
     grid-column: 1 / 2;
     grid-row: 1 / 6;
   }
-
-
-  /*----------------------------------------First Column----------------------------------------*/
-
-
+  
   /*--------------------------------------*\
                   Profile
   \*--------------------------------------*/
@@ -193,7 +196,7 @@ body {
   }
 
   .resume-button button:hover {
-    background-color: #6200ff;
+    background-color: #1f1f1f;
   }
   
   /*--------------------------------------*\
@@ -210,7 +213,7 @@ body {
     /* add a curve to the edges */
     border-radius: 16px;
     position: relative;
-    min-height: 100px;
+    height: 120px;
   }
 
 
@@ -337,6 +340,9 @@ body {
     height: 150px;
   }
   
+  
+  
+  /*----------------------------------------Second Column----------------------------------------*/
   /* A flex column for the second column */
   .second-column {
     display: flex;
@@ -345,10 +351,7 @@ body {
     grid-column: 2 / 3;
     grid-row: 1 / 6;
   }
-
-
-  /*----------------------------------------Second Column----------------------------------------*/
-
+  
   /*--------------------------------------*\
                   Updates
   \*--------------------------------------*/
@@ -371,7 +374,7 @@ body {
     padding: 10px;
     border-radius: 16px;
     position: relative;
-    min-height: 100px;
+    min-height: 90px;
     overflow: hidden; /* Ensure the pseudo-element does not overflow */
     animation: backgroundToggle 40s ease infinite; /* Animation for toggling background */
     animation-delay: 6s; /* Delay before starting the backgroundToggle animation */
@@ -425,7 +428,6 @@ body {
     background: linear-gradient(70deg, rgba(0, 141, 221, 0.5), rgba(98, 42, 189, 0.5));
     transform: rotate(45deg);
     animation: rotateLine 20s linear infinite;
-    animation-delay: 6s; /* Delay before starting the rotateLine animation */
     z-index: 1; /* Ensure it's above the background but below the text */
   }
   
@@ -506,7 +508,7 @@ body {
 .main-content {
   grid-column: 2 / 3;
   grid-row: 2 / 5;
-  height: 100%; /* Ensure it fills its parent container */
+  height: 100%; 
   position: relative; /* Ensure proper positioning for child elements */
 }
 
@@ -517,81 +519,139 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 0px;
   border-radius: 16px;
   position: relative;
   height: 100%; /* Adjust to fill the parent container */
 }
 
-/* Styles for the carousel container */
+/* Ensure the .carousel-container fills its parent */
 .carousel-container {
-  position: absolute; /* Absolute positioning to fill the parent */
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  position: relative;
   overflow: hidden;
   border-radius: 16px;
 }
 
-/* Container for carousel images */
-.carousel-images {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: relative; /* Ensure correct stacking of images */
-  overflow: hidden;
-}
 
 /* Individual carousel image */
 .carousel-image {
   min-width: 100%;
   height: 100%;
   background-position: center;
-  background-size: cover; /* Ensure images cover the container */
-  position: absolute; /* Ensure correct positioning of images */
+  background-size: cover;
+  position: absolute;
   transition: opacity 0.5s ease;
-  opacity: 0;
-  top: 0;
-  left: 0;
+  opacity: 0; /* Default opacity */
+  border-radius: 16px;
 }
 
-/* Active image */
-.carousel-image.active {
+/* Current image */
+.carousel-image.current {
   opacity: 1;
+  animation: none; /* No animation */
 }
 
-/* Dot navigation */
-.carousel-dots {
+/* Image entering */
+.carousel-image.entering {
+  animation: slideIn 0.5s forwards;
+}
+
+/* Image exiting */
+.carousel-image.exiting {
+  animation: slideOut 0.5s forwards;
+}
+
+/* Container for dot navigation */
+.carousel-dots-container {
   position: absolute;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  align-items: center;
+  padding: 5px; /* Space between dots and container border */
+  
+  /* Box around all dots */
+  border-radius: 20px; /* Rounded corners */
+  background-color: #4b4b4b6c;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.877); Subtle shadow around the container */
 }
 
+/* Dot navigation */
+.carousel-dots {
+  display: flex;
+}
+
+/* Individual dot */
 .dot {
-  height: 10px;
-  width: 10px;
+  height: 6px;
+  width: 6px;
   border-radius: 50%;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   margin: 0 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Active dot */
 .dot.active {
   background-color: #008ddd; /* Active dot color */
+  
+  /* Slight scale effect for emphasis */
+  transform: scale(1.2);
 }
 
 
 
-  
+/* Keyframes for sliding in effect */
+@keyframes slideIn {
+  0% {
+    /* Initial tiny and off-screen position */
+    transform: scale(0.8) translateX(var(--slide-in-start));
+    opacity: 0;
+  }
+  100% {
+    /* Final position and size */
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for sliding out effect */
+@keyframes slideOut {
+  0% {
+    /* Initial position and size */
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    /* Off-screen position and smaller size */
+    transform: scale(0.8) translateX(var(--slide-out-end));
+    opacity: 0;
+  }
+}
+
+/* Apply custom easing to animation */
+.carousel-image.entering {
+  animation: slideIn 0.7s cubic-bezier(0.6, 0, 0.58, 1) forwards; /* Increased duration to 1s */
+}
+
+.carousel-image.exiting {
+  animation: slideOut 0.7s cubic-bezier(0.6, 0, 0.58, 1) forwards; /* Increased duration to 1s */
+}
+
+.carousel-image.entering,
+.carousel-image.exiting {
+  animation-fill-mode: forwards; /* Keeps the styles of the last keyframe */
+}
+
 
   /*--------------------------------------*\
                   Social & Fun Fact
   \*--------------------------------------*/
-  .social-fun-container {
+  .social-game-container {
     display: flex;
     flex-direction: row;
     gap: 3%;
@@ -599,22 +659,142 @@ body {
     grid-row: 4 / 5;
   }
   
-  .social-icons, .fun-fact {
+  .social-icons, .game {
     flex: 1 1 40%;
     /* Ensure each takes up 40% of the space in the flex container */
     height: 80px;
   }
 
-  .fun-fact {
-    grid-column: 2 / 3;
-    grid-row: 5 / 6;
-  }
-  
   .social-icons {
     grid-row: 5 / 6;    
   }
   
+  /* Ensure the game block styles */
+.game {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Optional: add padding for spacing */
+}
 
+/* Button styles */
+.btn-12,
+.btn-12 *,
+.btn-12 :after,
+.btn-12 :before,
+.btn-12:after,
+.btn-12:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-12 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+  border-radius: 16px;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+  border: 2px solid transparent; /* Add border for animation effect */
+  transition: color 0.2s ease, border-color 0.2s ease;
+  z-index: 2; /* Ensure button text is on top */
+}
+
+.btn-12:disabled {
+  cursor: default;
+}
+
+.btn-12:-moz-focusring {
+  outline: auto;
+}
+
+.btn-12 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-12 [hidden] {
+  display: none;
+}
+
+.btn-12 span {
+  mix-blend-mode: difference;
+}
+
+.btn-12:after,
+.btn-12:before {
+  background: linear-gradient(
+    90deg,
+    #fff 25%,
+    transparent 0,
+    transparent 50%,
+    #fff 0,
+    #fff 75%,
+    transparent 0
+  );
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateY(var(--progress, 100%));
+  transition: transform 0.2s ease;
+  z-index: -1; /* Ensure gradient is below the text */
+}
+
+.btn-12:after {
+  --progress: -100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 25%,
+    #fff 0,
+    #fff 50%,
+    transparent 0,
+    transparent 75%,
+    #fff 0
+  );
+  z-index: -1; /* Ensure gradient is below the text */
+}
+
+.btn-12:hover:after,
+.btn-12:hover:before {
+  --progress: 0;
+}
+
+/* Color transition after hover */
+.btn-12:hover {
+  color: #000;
+  border-color: #000;
+}
+
+
+
+
+
+
+
+
+
+  
+  
+  /*----------------------------------------Third Column----------------------------------------*/
+  
   /* A flex column for the 3rd column */
   .third-column {
     display: flex;
@@ -623,10 +803,6 @@ body {
     grid-column: 3 / 4;
     grid-row: 1 / 6;
   }
-
-
-  /*----------------------------------------Third Column----------------------------------------*/
-
   /*--------------------------------------*\
                   Map & Weather
   \*--------------------------------------*/
@@ -634,14 +810,136 @@ body {
   .map {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
-    height: 30%;
+    height: 100%;
+    width: 100%;
+   
   }
+  .block-map {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 16px;
+    position: relative;
+    height: 300px; /* Adjust as needed */
+    width: 89.5%; /* Adjust as needed */
+    overflow: hidden; /* Ensure children do not overflow the rounded corners */
+  }
+  
+  .map-component {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Hide the attribution text */
+  .leaflet-control-attribution {
+    display: none !important;
+  }
+
+  /* Hide the zoom controls */
+  .leaflet-control-zoom {
+    display: none !important;
+  }
+
+
+
   
   .weather {
     grid-column: 3 / 4;
     grid-row: 3 / 4;
     height: 8%;
   }
+  
+  .block-weather {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 16px;
+    position: relative; 
+    height: 80px;
+    width: 89.5%;
+  }
+  
+  .weather-widget {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 16px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+  }
+  
+  .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+  
+  .date-number {
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+    left: 10px;
+  }
+  
+  .weather-location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    margin-left: 30px;
+  }
+  
+  .location-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .weather-description {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+  }
+  
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .flag-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .day {
+    font-size: 20px;
+    font-weight: bold;
+    color: #535353;
+  }
+  
+  
+  
   
   /*--------------------------------------*\
                   Pics
@@ -683,13 +981,13 @@ body {
 
   @media (min-height: 910px) {
     .block-projects-fun {
-      min-height: 22vh; /* Adjust for smaller screens */
+      min-height: 30vh; /* Adjust for smaller screens */
     }
   }
   
   @media (max-width: 800px) {
     .block-projects-fun {
-      max-height: 30vh; /* Further adjust for even smaller screens */
+      max-height: 40vh; /* Further adjust for even smaller screens */
     }
   }
   
