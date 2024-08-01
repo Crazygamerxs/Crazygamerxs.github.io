@@ -1,0 +1,50 @@
+
+/* -----------------------Top Bar--------------------- */
+
+.top-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 62.7%;
+    border-radius: 26px;
+    overflow: hidden; /* to contain the shrinking effect */
+    top: 30px;
+    left: 300px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    
+  }
+  
+  .shrink-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #e8e8e3; /* color for the shrinking effect */
+    border-radius: 16px;
+    transition: all 0.4s ease;
+    z-index: 0; /* make sure it’s behind the items */
+  }
+  
+  .top-bar-item {
+    position: relative;
+    z-index: 1; /* make sure it’s in front of the shrink-container */
+    padding: 0 20px;
+    cursor: pointer;
+    transition: color 0.3s ease; /* optional: to change color on hover */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent or define a default color */
+  }
+  
+  .top-bar-item:hover {
+    color: #000000; /* change text color on hover, optional */
+  }
+  
+  .top-bar-item img {
+    height: 30px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align image with text if needed */
+    margin-right: 8px; /* Spacing between icon and text */
+  }
+  
+  

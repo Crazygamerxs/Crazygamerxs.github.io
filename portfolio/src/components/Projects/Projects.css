@@ -1,0 +1,247 @@
+.projects-page {
+    background-color: #f1f1f1; /* Set background color */
+    min-height: 100vh; 
+}
+
+.Carousel-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    background-color: #f8f8f800;
+    position: relative;
+    top: 20px;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    position: relative;
+}
+
+.main-image-container, .side-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 30px;
+}
+
+.main-image {
+    width: 300px; /* Main image size */
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.5s;
+}
+
+
+.side-image {
+    width: 200px; /* Smaller size for side images */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.5s;
+    opacity: 0.7;
+}
+
+.side-image-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.side-image-container:first-of-type {
+    left: 0;
+    transform: translateX(-100px);
+}
+
+.side-image-container:last-of-type {
+    right: 0;
+    transform: translateX(100px);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    position: absolute;
+    bottom: 20px;
+    padding: 0 20px;
+    top: 750px;
+}
+
+.previous-button, .next-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 16px;
+    background-color: #ffffff;
+    color: #7c7c7c;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #7c7c7c;
+    width: 200px;
+}
+
+.previous-button:hover, .next-button:hover {
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.line-container {
+    flex: 1;
+    position: relative;
+    height: 2px;
+}
+
+.line {
+    height: 2px;
+    background-color: #7c7c7c;
+    width: 100%;
+}
+
+.progress-line {
+    position: absolute;
+    height: 2px;
+    background-color: #000000; /* Dark colored progress line */
+    transition: width 0.3s;
+    bottom: 1px;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap; /* Allows wrapping to new lines if necessary */
+    width: 300px;
+    justify-content: center;
+}
+
+.skill-box {
+    font-size: 0.7em; /* Adjust text size relative to the image size */
+    color: #000;
+    background-color: white;
+    border-radius: 16px;
+    padding: 2px 4px;
+    margin: 2px; /* Increased margin to add space between each skill */
+    font-family: 'Giest Mono', monospace;
+    font-weight: lighter;
+}
+
+
+/* --------------------------------- */
+/* Project Description Component Styling */
+/* --------------------------------- */
+
+.project-details-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .project-details-content {
+    padding: 20px;
+  }
+  
+  .project-details-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .project-details-container.open {
+    transform: translateX(0);
+  }
+  
+
+
+
+
+  /* --------------------------------- */
+/* Project Media Queries */
+/* --------------------------------- */
+
+
+@media (max-height: 1000px) {
+
+    .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        position: relative;
+    }
+
+    .side-image-container {
+        position: absolute;
+        top: 30%;
+        transform: translateY(-50%);
+    }
+    .main-image {
+        width: 300px; /* Main image size */
+        height: 350px;
+        object-fit: cover;
+        border-radius: 16px;
+        transition: transform 0.5s;
+    }
+    
+    .side-image {
+        width: 200px; /* Smaller size for side images */
+        height: 250px;
+        object-fit: cover;
+        border-radius: 16px;
+        transition: transform 0.5s;
+        opacity: 0.7;
+    }
+
+
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        position: absolute;
+        bottom: 20px;
+        padding: 0 20px;
+        top: 600px;
+    }
+
+    .previous-button, .next-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 16px;
+        background-color: #ffffff;
+        color: #7c7c7c;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border: 1px solid #7c7c7c;
+        width: 150px;
+    }
+}
+

@@ -11,6 +11,18 @@ function Carousel() {
   const [direction, setDirection] = useState('right'); // default to right
 
   useEffect(() => {
+    // Automatic transition every 7 seconds
+    const interval = setInterval(() => {
+      const newIndex = (currentIndex + 1) % imageArray.length;
+      if (!isAnimating) {
+        setNextIndex(newIndex);
+      }
+    }, 7000); // Change image every 7 seconds
+
+    return () => clearInterval(interval);
+  }, [currentIndex, isAnimating]);
+
+  useEffect(() => {
     if (nextIndex !== null) {
       setIsAnimating(true);
       setDirection(nextIndex > currentIndex ? 'right' : 'left');
