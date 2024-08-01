@@ -1,13 +1,31 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './HomePage.css';
 import images from '../../images/index'; // Adjust the path as needed
 import ControlledCarousel from './main_content';
 import MapComponent from './map';
-// import ModeToggle from './modeToggle';
-import ImageSlider from './ImageSlider';
+import facts from './facts.json'; // make sure the path is correct
+import SkillsContainer from './skillscontainer';
+import ToggleModeButton from './ToggleModeButton'; // Adjust the path as needed
+
 
 const HomePage = () => {
-  
+  const [randomFact, setRandomFact] = useState('');
+
+  useEffect(() => {
+    const getRandomFact = () => {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      return facts[randomIndex];
+    };
+    
+    setRandomFact(getRandomFact());
+  }, []);
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleMode = () => {
+    setIsDarkMode(prevMode => !prevMode);
+    document.body.classList.toggle('dark-mode', !isDarkMode);
+  };
 
   return (
     <div className="home-page">
@@ -48,15 +66,20 @@ const HomePage = () => {
             <div className="projects-funfacts-icon">
               <img src={images.ProjectsIcon} alt="Projects Icon" />
             </div>
+              <h4>Projects</h4>
           </div>
           <div className="block-projects-fun">
             <div className="projects-funfacts-icon">
               <img src={images.funFactsIcon} alt="Fun Facts Icon" />
             </div>
+            <h4>About Me</h4>
           </div>
         </div>
-        <div className="block achievements">
-          Random Fun Facts
+        <div className="block-achievements">
+          <div className='achievements'>
+            <h4>Fun Fact:</h4> 
+            <p>{randomFact}</p>
+          </div>
         </div>
       </div>
       <div className="second-column">
@@ -70,34 +93,36 @@ const HomePage = () => {
           <ControlledCarousel />
         </div>
         <div className="social-game-container">
-          <div className="block game">
-          <button className="btn-12">Enjoy A Game</button>
-          </div>
+          
           <div className="block social-icons">
-            Social Icons
+          <SkillsContainer isDarkMode={isDarkMode} />
           </div>
         </div>
       </div>
       <div className='third-column'>
         <div className="block-map">
-          <MapComponent />
+          <div className='map'>
+            <MapComponent />
+          </div>
         </div>
-        <div className="block-weather">
-          weather
+        <div className="block-game">
+        <div className="block game">
+          <button className="btn-12">Enjoy A Game</button>
+          </div>
         </div>
         <div className='pics-container'>
           <div className="block-pic">
-            <img src={images.me} alt="Me" />
+            <img src={images.kitty} alt="Me" />
           </div>
-          <div className="block-another-pic">
+          {/* <div className="block-another-pic">
+              image
             <div className="block-2nd-pic">
-              <ImageSlider />;
             </div>
-          </div>
+
+          </div> */}
         </div>
-        <div className="block-modes">
-          Toggle between different modes
-        </div>
+          <ToggleModeButton toggleMode={toggleMode} isDarkMode={isDarkMode} />
+        
       </div>
       
       

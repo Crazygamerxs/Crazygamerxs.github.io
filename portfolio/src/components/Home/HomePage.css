@@ -11,10 +11,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr; /* First and third columns are 1fr, second column is 2fr */
     grid-template-rows: repeat(4, 1fr); /* Four rows, each 1fr tall */
-    gap: 20px;
+    gap: 30px;
     height: 100vh;
     padding: 25px;
     box-sizing: border-box;
+    background-color: #ffffff;
   }
  
   
@@ -30,7 +31,76 @@ body {
     position: relative; 
   }
   
+  .dark-mode .home-page{
+    background-color: #121212;
+  }
   
+  .dark-mode .block {
+    background-color: #1f1f1f;
+    color: white;
+
+  }
+  
+  .dark-mode .block-profile {
+    background-color: #1f1f1f;
+    color: white;
+  }
+
+  .dark-mode .profile-1st-container h4 {
+    color: white;
+  }
+  .dark-mode .profile-1st-container h6 {
+    color: white;
+  }
+
+  .dark-mode .block-job-status {
+    background-color: #1f1f1f;
+    color: white;
+  }
+
+  .dark-mode .job-status h6 {
+    color: white;
+  }
+
+  .dark-mode .job-status h7 {
+    color: white;
+  }
+
+  .dark-mode .block-projects-fun {
+    background-color: #1f1f1f;
+    color: white;
+  }
+  .dark-mode .block-projects-fun h4 {
+    color: white;
+  }
+
+  .dark-mode .block-achievements {
+    background-color: #1f1f1f;
+    color: white;
+  }
+
+  .dark-mode .block-skills {
+    background-color: #1f1f1f;
+    color: white;
+  }
+
+  .dark-mode .block-game{
+    background-color: #1f1f1f;
+    color: white;
+  }
+  
+  .dark-mode .block-modes {
+    background-color: #1f1f1f;
+    color: white;
+  }
+
+  .dark-mode .mode-toggle {
+    background-color: #191919;
+  }
+
+  .dark-mode .block-mode:hover{
+    background-color: #1f1f1f;
+  }
   
   /*----------------------------------------First Column----------------------------------------*/
   
@@ -155,10 +225,10 @@ body {
 
   .Github-Icon{
     position: absolute;
-    top: 41px;
+    top: 40px;
     left: 30px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -277,6 +347,17 @@ body {
     box-sizing: border-box; /* Ensures padding and border are included in the height */
     flex: 1;
   }
+
+  .block-projects-fun h4 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #4b4b4b;
+    position: relative;
+    z-index: 2; /* Ensure the text is above the pseudo-element */
+    transition: transform 0.3s ease;
+    position: relative;
+    top: 38px;
+  }
   
   
 
@@ -337,9 +418,44 @@ body {
   .achievements {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
-    height: 150px;
+    height: 130px;
+  }
+
+  .block-achievements {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    /* add a curve to the edges */
+    border-radius: 16px;
+    position: relative; 
+    top: 20px;
   }
   
+  .achievements h4 {
+    font-weight: 500;
+    right: 120px;   
+    top: 0px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    font-size: 13px;
+    
+  }
+
+  .achievements p {
+    font-weight: light;
+    position: relative;
+    z-index: 2; 
+    transition: transform 0.3s ease;
+    max-width: 280px;
+    font-size: 13px;
+    top: 10px;
+    left: 5px;
+    text-align: start;
+  }
   
   
   /*----------------------------------------Second Column----------------------------------------*/
@@ -592,7 +708,7 @@ body {
   background-color: rgb(255, 255, 255);
   margin: 0 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.1s ease, transform 0.1s ease;
 }
 
 /* Active dot */
@@ -635,11 +751,11 @@ body {
 
 /* Apply custom easing to animation */
 .carousel-image.entering {
-  animation: slideIn 0.7s cubic-bezier(0.6, 0, 0.58, 1) forwards; /* Increased duration to 1s */
+  animation: slideIn 0.9s cubic-bezier(0.6, 0, 0.58, 1) forwards; /* Increased duration to 1s */
 }
 
 .carousel-image.exiting {
-  animation: slideOut 0.7s cubic-bezier(0.6, 0, 0.58, 1) forwards; /* Increased duration to 1s */
+  animation: slideOut 0.9s cubic-bezier(0.6, 0, 0.58, 1) forwards; /* Increased duration to 1s */
 }
 
 .carousel-image.entering,
@@ -651,35 +767,35 @@ body {
   /*--------------------------------------*\
                   Social & Fun Fact
   \*--------------------------------------*/
-  .social-game-container {
-    display: flex;
-    flex-direction: row;
-    gap: 3%;
-    grid-column: 3 / 4;
-    grid-row: 4 / 5;
-  }
-  
-  .social-icons, .game {
-    flex: 1 1 40%;
-    /* Ensure each takes up 40% of the space in the flex container */
-    height: 80px;
-  }
 
-  .social-icons {
-    grid-row: 5 / 6;    
-  }
-  
-  /* Ensure the game block styles */
-.game {
-  grid-column: 2 / 3;
-  grid-row: 5 / 6;
+.social-game-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px; /* Optional: add padding for spacing */
+  justify-content: center; /* Center the container horizontally */
+  height: 150px;
 }
 
+.block-social-icons {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: start; /* Center items horizontally */
+  gap: 20px; /* Add gap between each icon */
+  padding: 10px;
+  position: relative;
+  top: 7px;
+  left: 15px;
+}
+
+.skill-icon {
+  width: 40px; /* Adjust the size of icons */
+  height: 40px; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images are not distorted */
+  transition: transform 0.2s ease; /* Smooth transition effect */
+}
+
+.skill-icon:hover {
+  transform: scale(1.3); /* Scale the icon to 120% of its original size */
+}
+  
 /* Button styles */
 .btn-12,
 .btn-12 *,
@@ -810,9 +926,8 @@ body {
   .map {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
-    height: 100%;
+    height: 100px;
     width: 100%;
-   
   }
   .block-map {
     background-color: #fafafa;
@@ -849,13 +964,13 @@ body {
 
 
   
-  .weather {
+  .game {
     grid-column: 3 / 4;
     grid-row: 3 / 4;
     height: 8%;
   }
   
-  .block-weather {
+  .block-game {
     background-color: #fafafa;
     display: flex;
     justify-content: center;
@@ -864,79 +979,11 @@ body {
     padding: 20px;
     border-radius: 16px;
     position: relative; 
-    height: 80px;
+    height: 70px;
     width: 89.5%;
   }
   
-  .weather-widget {
-    display: flex;
-    align-items: center;
-    background-color: #fafafa;
-    padding: 10px;
-    border-radius: 16px;
-    font-family: Arial, sans-serif;
-    color: #333;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90px;
-  }
   
-  .date {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
-  }
-  
-  .date-number {
-    font-size: 36px;
-    font-weight: bold;
-    position: relative;
-    left: 10px;
-  }
-  
-  .weather-location {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 18px;
-    margin-left: 30px;
-  }
-  
-  .location-header {
-    display: flex;
-    align-items: center;
-  }
-  
-  .weather-description {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    right: 20px;
-  }
-  
-  .weather-icon {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .flag-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-  }
-  
-  .day {
-    font-size: 20px;
-    font-weight: bold;
-    color: #535353;
-  }
   
   
   
@@ -966,8 +1013,8 @@ body {
     padding: 0; /* Remove padding to ensure image fits exactly */
     border-radius: 16px;
     position: relative; 
-    height: 300px;
-    width: 48%;
+    height: 200px;
+    width: 100%;
     overflow: hidden; /* Ensure any overflow is hidden */
   }
 
@@ -989,7 +1036,7 @@ body {
   padding: 0; /* Remove padding to ensure image fits exactly */
   border-radius: 16px;
   position: relative; 
-  height: 300px;
+  height: 200px;
   width: 48%;
   overflow: hidden; /* Ensure any overflow is hidden */
 }
@@ -1049,27 +1096,91 @@ body {
   }
   
   /*--------------------------------------*\
-                  Modes
-  \*--------------------------------------*/
-  .modes {
-    grid-column: 3 / 4;
-    grid-row: 6 / 7;
-    height: 50px;
-  }
-  
+              Modes
+\*--------------------------------------*/
 
-  .block-modes {
-    background-color: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    /* add a curve to the edges */
-    border-radius: 16px;
-    position: relative; 
-    height: 60px;
-  }
+.modes {
+  grid-column: 3 / 4;
+  grid-row: 6 / 7;
+  height: 50px;
+}
+
+.block-modes {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 16px;
+  position: relative; 
+  height: 60px;
+  width: 340px; /* Adjust width as needed */
+  border: 2px solid #ccc; /* Border for styling */
+}
+
+.mode-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mode-icon:hover {
+  transform: scale(1.3);
+}
+
+.mode-toggle {
+  position: absolute;
+  width: 50%; /* The sliding button will take half the parent width */
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  transition: all 0.3s ease; /* Smooth transition */
+  z-index: 1;
+}
+
+.mode-toggle.light-mode {
+  left: 0;
+}
+
+.mode-toggle.dark-mode {
+  left: 50%; /* Move to the right side */
+}
+
+.mode-icon {
+  z-index: 2;
+}
+
+.active {
+  opacity: 1;
+}
+
+.mode-icon:not(.active) {
+  opacity: 0.5;
+}
+
+.block-modes:hover {
+  background-color: #e9e9e9;
+  transition: background-color 0.5s ease;
+}
+
+/* If using CSS variables for easier maintenance */
+:root {
+  --bg-light-hover: #e9e9e9;
+  --bg-dark-hover: #222222;
+}
+
+.block-modes:hover {
+  background-color: var(--bg-light-hover);
+}
+
+.dark-mode .block-modes:hover {
+  background-color: var(--bg-dark-hover);
+}
+
+  
+  
 
   
   /*--------------------------------------*\
@@ -1080,6 +1191,14 @@ body {
     .block-projects-fun {
       min-height: 30vh; /* Adjust for smaller screens */
     }
+    .block-another-pic, .block-pic{
+      min-height: 30vh;
+    }
+    .block-achievements{
+      min-height: 0vh;
+      top: -0px;
+    }
+    
   }
   
   @media (max-width: 800px) {
