@@ -29,7 +29,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="home-page">
+    <div className={`home-page ${isDarkMode ? 'dark-mode' : ''}`}>
        <div className="first-column">
       <div className="block-profile">
         <div className="profile-1st-container">
@@ -48,7 +48,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="profile-description">
-          <p>A CS student aspiring to be one of the greats. President of TechCollab Club, Cofounder of Conhacks.</p>
+          <p>A computer science student aspiring to be one of the greats. President of TechCollab Club, Cofounder of Conhacks.</p>
         </div>
         <div className="profile-2nd-container">
           <a href="https://github.com/Crazygamerxs" target="_blank" rel="noopener noreferrer" className="Github-Icon">
@@ -61,7 +61,7 @@ const HomePage = () => {
       </div>
       <div className="block-job-status">
         <div className="job-status">
-          <h6>Currently</h6>
+          <h6>Previosuly</h6>
           <h4>Software Developer</h4>
           <h7>@Bend All Automotives</h7>
         </div>

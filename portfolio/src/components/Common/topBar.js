@@ -13,6 +13,7 @@ const items = [
 ];
 
 const TopBar = () => {
+  // eslint-disable-next-line
   const [hoveredItem, setHoveredItem] = useState(null);
   const [containerStyle, setContainerStyle] = useState({});
 

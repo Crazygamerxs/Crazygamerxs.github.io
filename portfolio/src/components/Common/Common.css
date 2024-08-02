@@ -12,8 +12,7 @@
     overflow: hidden; /* to contain the shrinking effect */
     top: 30px;
     left: 300px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   .shrink-container {
@@ -32,8 +31,9 @@
     padding: 0 20px;
     cursor: pointer;
     transition: color 0.3s ease; /* optional: to change color on hover */
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none !important; /* Remove underline from links */
     color: inherit; /* Inherit color from parent or define a default color */
+    font-family: "Geist Mono", Arial, sans-serif;
   }
   
   .top-bar-item:hover {

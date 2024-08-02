@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import images from '../../images/index'; // Adjust the path as needed
 import './HomePage.css';
 
@@ -8,16 +8,7 @@ const skills = [
   'react', 'node', 'dart', 'flutter', 'aws', 'googlecloud', 'linux', 'bash', 'mysql', 'mongodb'
 ];
 
-const SkillsContainer = () => {
-  // State to manage dark mode
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Check if dark mode is enabled
-    const darkMode = document.body.classList.contains('dark-mode');
-    setIsDarkMode(darkMode);
-  }, []);
-
+const SkillsContainer = ({ isDarkMode }) => {
   return (
     <div className="social-game-container">
       <div className={`block-social-icons ${isDarkMode ? 'dark-mode' : ''}`}>

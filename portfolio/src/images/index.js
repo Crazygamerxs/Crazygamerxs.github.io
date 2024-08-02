@@ -32,6 +32,11 @@ import dart from './skills/dart.png';
 import flask_darkmode from './skills/flask_darkmode.png';
 import home from './home.png';
 import nature2 from './nature2.jpg';
+import open_icon from './open_icon.png';
+import chess from './Chess.jpg';
+import bojack from './bojack.jpg';
+import vagabond from './vagabond.jpg';
+import eldenring from './eldenring.jpg';
 
 const images = {
   pic,
@@ -67,7 +72,12 @@ const images = {
   dart,
   flask_darkmode,
   home,
-  nature2
+  nature2,
+  open_icon,
+  chess,
+  bojack,
+  vagabond,
+  eldenring
 };
 
 export default images;

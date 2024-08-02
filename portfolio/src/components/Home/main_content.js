@@ -17,7 +17,7 @@ function Carousel() {
       if (!isAnimating) {
         setNextIndex(newIndex);
       }
-    }, 7000); // Change image every 7 seconds
+    }, 4000); // Change image every 7 seconds
 
     return () => clearInterval(interval);
   }, [currentIndex, isAnimating]);
