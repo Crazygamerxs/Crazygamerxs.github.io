@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #d5d6d0;
+    background-color: #f1f1f1;
     margin: 0;
     padding: 0;
     overflow-y: visible; /* Prevent horizontal scrolling */
@@ -31,7 +31,7 @@ h1 {
 }
 
 .box {
-    background-color: #b8bab4;
+    background-color: #e8e8e3;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -41,8 +41,8 @@ h1 {
     flex-direction: column;
     align-items: center;
     height: 300px;
-    width: 450px;
-    overflow: visible; /* Prevent text overflow */
+    width: 420px;
+    overflow: visible;
 }
 
 .box-title {
@@ -50,7 +50,7 @@ h1 {
     top: 10px;
     left: 10px;
     font-weight: lighter;
-    background-color: #e8e8e3;
+    background-color: #cfcfcf;
     padding: 6px;
     border-radius: 16px;
     font-family: "Geist Mono", Arial, sans-serif;
@@ -67,6 +67,11 @@ h1 {
     border-radius: 16px;
     position: relative;
     top: 50px;
+}
+
+.box-image:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
 }
 
 .box-text-1a {
@@ -117,6 +122,30 @@ h1 {
     color: rgb(61, 64, 60);
     align-items: start;
     text-align: left;
+    padding-bottom: 50px; 
 }
 
 
+/* Dark Mode */
+
+.dark-mode {
+    background-color: #191919;
+} 
+
+.dark-mode h1 {
+    color: #ffffff;
+}
+
+.dark-mode .box {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-mode .box-title {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.dark-mode .box-text-1a, .dark-mode .box-text-1b, .dark-mode .box-text-2a, .dark-mode .box-text-2b {
+    color: #ffffff;
+}

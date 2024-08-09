@@ -4,10 +4,12 @@ import images from '../../images/index'; // Adjust the import path as needed
 import './Projects.css'; 
 
 const imageArray = [
-  { src: images.kitty, title: "Kitty Project", skills: ["React", "CSS", "JavaScript", "Node.js", "Express", "MongoDB"] },
-  { src: images.ice_bear, title: "Ice Bear Project", skills: ["Node.js", "Express", "MongoDB"] },
-  { src: images.nature, title: "Nature Project", skills: ["Python", "Flask", "PostgreSQL"] },
-  { src: images.nature2, title: "Nature Project", skills: ["Python", "Django", "PostgreSQL"] }
+  { src: images.civfix, title: "Civfix", skills: ["Python", "Django", "JS", "Html/Bootstrap", "SQLite"] },
+  { src: images.Camsentinel, title: "CamSentinel", skills: ["Python", "Flask", "Sqlite", "Opencv", "Raspberrypi"] },
+  { src: images.tuxania, title: "Tuxania", skills: ["Ignition", "Html/Css", "JS", "Python", "Sql"] },
+  { src: images.dreamspace, title: "Dreamspace", skills: ["Python", "Flask", "Three.js", "ArCore", ""] },
+  { src: images.Penpal, title: "PenPal", skills: ["Node.js", "Html/Css", "C++", "Sql"] }
+
   // Add more images and skills as needed
 ];
 
@@ -74,12 +76,18 @@ function Projects() {
           </div>
         </div>
         <div className="button-container">
-          <button className="previous-button" onClick={previousImage}>Back</button>
+            <button className="previous-button" onClick={previousImage}>
+                <img src={images.leftarrow} alt="Left Arrow" />
+                <span style={{ marginTop: '6px' }}>Back</span>
+            </button>
           <div className="line-container">
             <div className="line"></div>
             <div className="progress-line" style={{ width: `${progressWidth}%` }}></div>
           </div>
-          <button className="next-button" onClick={nextImage}>Next</button>
+            <button className="next-button" onClick={nextImage}>
+              <span style={{ marginTop: '6px',marginLeft: '2px'}}>Next</span>
+              <img src={images.rightarrow} alt="Right Arrow" />
+            </button>
         </div>
       </div>
     </div>

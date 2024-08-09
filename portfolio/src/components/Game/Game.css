@@ -1,0 +1,118 @@
+.game-page{
+
+}
+
+
+h1 {
+    color: rgb(61, 64, 60);
+    font-size: 51px;
+    font-weight: lighter;
+    position: relative;
+    top: 20px;
+    left: 280px;
+    font-family: Stringer, "Times New Roman", sans-serif;
+}
+/* General Styles */
+.game-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+
+
+/* Controls Section */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between the dropdowns */
+    position: relative;
+    top: 40px; /* Adds space below the controls */
+    left: 285px;
+}
+
+/* Common Dropdown Styles */
+.dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.dropdown:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none;
+}
+
+/* Specific Dropdown Styles */
+.technique-dropdown {
+    width: 700px; /* Wider width for the technique dropdown */
+}
+
+.Settings {
+    padding: 10px;
+    background-color:#f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90px;
+    text-align: center;
+}
+/* Text Boxes Section */
+.text-boxes {
+    display: flex;
+    gap: 15px; /* Adds space between the text boxes */
+    position: relative;
+    top: 50px; /* Adds space below the controls */
+    left: 285px;
+}
+
+.text-box {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; /* Adjust width as needed */
+    box-sizing: border-box;
+}
+
+.text-box-encrypt{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 450px; /* Adjust width as needed */
+    height: 200px;
+    box-sizing: border-box;
+}
+
+.text-box-decrypt{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 450px; /* Adjust width as needed */
+    height: 200px;
+    box-sizing: border-box;
+}
+
+.text-box::placeholder {
+    color: #888; /* Placeholder text color */
+}
+
+.code-button{
+    position: relative;
+    top: 60px;
+    left: 285px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px; /* Center text vertically */
+
+}
+

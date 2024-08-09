@@ -6,8 +6,13 @@ const ToggleModeButton = ({ isDarkMode, toggleMode }) => {
   const [mode, setMode] = useState(isDarkMode);
 
   useEffect(() => {
-    setMode(isDarkMode); // Ensure the mode is set correctly when the component mounts or updates
+    setMode(isDarkMode);
   }, [isDarkMode]);
+
+  const handleToggle = () => {
+    toggleMode();
+    setMode(prevMode => !prevMode);
+  };
 
   return (
     <div className="block-modes">
@@ -15,19 +20,19 @@ const ToggleModeButton = ({ isDarkMode, toggleMode }) => {
         src={images.light_mode} 
         alt="Light Mode Icon" 
         className={`mode-icon ${!mode ? 'active' : ''}`}
-        onClick={toggleMode} // Trigger mode toggle on icon click
+        onClick={handleToggle} 
       />
       <div 
         className={`mode-toggle ${mode ? 'dark-mode' : 'light-mode'}`} 
-        onClick={toggleMode} // Trigger mode toggle on button click
+        onClick={handleToggle}
       >
-        {/* Sliding button or indicator can be placed here */}
+        <div className={`slider ${mode ? 'slider-right' : 'slider-left'}`} />
       </div>
       <img 
         src={images.dark_mode} 
         alt="Dark Mode Icon" 
         className={`mode-icon ${mode ? 'active' : ''}`}
-        onClick={toggleMode} // Trigger mode toggle on icon click
+        onClick={handleToggle} 
       />
     </div>
   );

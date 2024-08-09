@@ -37,6 +37,16 @@ import chess from './Chess.jpg';
 import bojack from './bojack.jpg';
 import vagabond from './vagabond.jpg';
 import eldenring from './eldenring.jpg';
+import leftarrow from './leftarrow.png';
+import rightarrow from './rightarrow.png';
+import Camsentinel from './projects/Camsentinel.png';
+import tuxania from './projects/tuxania.png';
+import civfix from './projects/civfix.png';
+import dreamspace from './projects/dreamspace.png';
+import Penpal from './projects/Penpal.png';
+import morris_worm from './main_content/morris_worm.webp';
+import al_Khwarizmi from './main_content/al_Khwarizmi.webp';
+import robo_hand from './main_content/robo_hand.jpg';
 
 const images = {
   pic,
@@ -77,7 +87,17 @@ const images = {
   chess,
   bojack,
   vagabond,
-  eldenring
+  eldenring,
+  leftarrow,
+  rightarrow,
+  Camsentinel,
+  tuxania,
+  civfix,
+  dreamspace,
+  Penpal,
+  morris_worm,
+  al_Khwarizmi,
+  robo_hand,
 };
 
 export default images;

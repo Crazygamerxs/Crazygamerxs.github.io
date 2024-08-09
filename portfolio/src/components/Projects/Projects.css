@@ -1,7 +1,7 @@
 .projects-page {
     background-color: #f1f1f1;
     min-height: 100vh;
-    position: relative; /* Ensure it's positioned relative to its container */
+    position: relative; 
   }
   
   .Carousel-Container {
@@ -42,21 +42,26 @@
   
   .open-icon {
     position: absolute;
-    width: 60px; /* Adjust size as needed */
+    width: 60px; 
     height: 60px;
-    bottom: 200px; /* Adjust as needed to position vertically */
-    right: 120px;  /* Adjust as needed to position horizontally */
+    bottom: 200px; /* Adjust as needed */
+    left: 40%;
+    top: 40%;
+    /* transform: translateX(-50%); */
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
-  }
+}
+
+
   
   .main-image-container:hover .main-image {
-    opacity: 0.8; /* Decrease opacity on hover */
+    opacity: 0.6; 
+    background: #000000;
   }
   
   .main-image-container:hover .open-icon {
     opacity: 1;
-    /* transform: scale(1.1); Slightly enlarge icon on hover */
+
   }
 
   .open-icon:hover {
@@ -82,6 +87,10 @@
     border-radius: 16px;
     transition: transform 0.5s;
     opacity: 0.1;
+  }
+
+  .side-image-container:hover {
+    opacity: 1;
   }
   
   .side-image-container {
@@ -122,11 +131,24 @@
     transition: background-color 0.3s;
     border: 1px solid #7c7c7c;
     width: 200px;
+    display: inline-flex;
+    gap:30px;
+  }
+
+  .next-button{
+    display: inline-flex;
+    gap: 42px;
   }
   
   .previous-button:hover, .next-button:hover {
     color: #000000;
     border: 1px solid #000000;
+  }
+
+  .previous-button img, .next-button img{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
   }
   
   .line-container {
@@ -175,14 +197,14 @@
     /* --------------------------------- */
   
     .project-details-container {
-        position: absolute; /* Positioned relative to the projects-page */
+        position: absolute; 
         top: 0;
-        left: 0; /* Set to 0 to position it normally */
-        width: 100%; /* Cover the full width of the projects-page */
-        height: 100%; /* Cover the full height of the projects-page */
-        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-        transform: translateX(100%); /* Start completely off-screen to the right */
-        transition: transform 1s ease-in-out; /* Smooth slide-in transition */
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(0, 0, 0, 0.8); 
+        transform: translateX(100%); 
+        transition: transform 1s ease-in-out; 
         z-index: 1000;
         display: flex;
         justify-content: center;
@@ -225,60 +247,89 @@
     }
 
     .project-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        border-bottom: 2px solid #ccc; /* Line underneath */
-        padding-bottom: 10px;
-      }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ccc; 
+      padding-bottom: 10px;
+    }
+    
+    .back-arrow {
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #333;
+    }
+    
+    .back-arrow:hover {
+      color: #000;
       
-      .back-arrow {
-        font-size: 24px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: #333;
-      }
-      
-      .back-arrow:hover {
-        color: #000;
-        
-      }
-      
-      .project-title {
-        font-size: 18px;
-        position: relative;
-        top: 10px;
-        right: 1300px;
-      }
-      
-      .project-details-description {
-        color: #333;
-        font-size: 16px;
-      }
-      
-      .project-details-description h3 {
-        margin-bottom: 10px;
-      }
-      
-      .project-details-description ul {
-        list-style-type: disc;
-        margin: 0;
-        padding-left: 20px;
-      }
-  
+    }
+    
+    .project-title {
+      font-size: 18px;
+      position: relative;
+      top: 10px;
+      right: 1300px;
+    }
+    
+    .project-details-description {
+      color: #333;
+      font-size: 16px;
+    }
+    
+    .project-details-description h3 {
+      margin-bottom: 10px;
+    }
+    
+    .project-details-description ul {
+      list-style-type: disc;
+      margin: 0;
+      padding-left: 20px;
+    }
+
   
   /* --------------------------------- */
       /* Dark Mode */
    /* --------------------------------- */      
    .dark-mode .projects-page{
+    background-color: #1f1f1f;
+  }
+
+  .dark-mode .previous-button, .dark-mode .next-button {
     background-color: #121212;
+    color: #ffffff;
+  }
+
+  .dark-mode .next-button:hover {
+    background-color: #ffffff;
+    color: #121212;
+  }
+
+  .dark-mode .previous-button:hover {
+    background-color: #ffffff;
+    color: #121212;
+  }
+
+  .dark-mode .skill-box {
+    color: #ffffff;
+    background-color: #121212;
+  }
+
+  .dark-mode .line {
+    background-color: #121212;
+  }
+
+  .dark-mode .progress-line {
+    background-color: #ffffff;
   }
 
 
 
-  /* --------------------------------- */
+
+/* --------------------------------- */
 /* Project Media Queries */
 /* --------------------------------- */
 
@@ -299,7 +350,7 @@
         transform: translateY(-50%);
     }
     .main-image {
-        width: 300px; /* Main image size */
+        width: 300px; 
         height: 350px;
         object-fit: cover;
         border-radius: 16px;
@@ -307,7 +358,7 @@
     }
     
     .side-image {
-        width: 200px; /* Smaller size for side images */
+        width: 200px; 
         height: 250px;
         object-fit: cover;
         border-radius: 16px;

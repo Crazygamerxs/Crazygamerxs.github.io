@@ -7,7 +7,7 @@ function AboutMeApp() {
     return (
         <div className="about-me-container">
             <TopBar />
-            <h1>Fun Facts</h1>
+            <h1>About Me</h1>
             <div className="boxes-container">
                 <div className="box">
                     <div className="box-title">FAVORITE MANGA </div>

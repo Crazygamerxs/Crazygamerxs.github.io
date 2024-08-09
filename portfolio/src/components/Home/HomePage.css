@@ -17,13 +17,13 @@ body {
   
   .home-page {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* First and third columns are 1fr, second column is 2fr */
-    grid-template-rows: repeat(4, 1fr); /* Four rows, each 1fr tall */
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: repeat(4, 1fr); 
     gap: 30px;
     height: 100vh;
     padding: 25px;
     box-sizing: border-box;
-    background-color: #ffffff;
+    background-color: #f1f1f1;
   }
  
   
@@ -40,17 +40,17 @@ body {
   }
   
   .dark-mode .home-page{
-    background-color: #121212;
+    background-color: #1f1f1f;
   }
   
   .dark-mode .block {
-    background-color: #1f1f1f;
+    background-color: #121212;
     color: white;
 
   }
   
   .dark-mode .block-profile {
-    background-color: #1f1f1f;
+    background-color: #121212;
     color: white;
   }
 
@@ -66,7 +66,7 @@ body {
   }
 
   .dark-mode .block-job-status {
-    background-color: #1f1f1f;
+    background-color: #121212;
     color: white;
   }
 
@@ -79,7 +79,7 @@ body {
   }
 
   .dark-mode .block-projects-fun {
-    background-color: #1f1f1f;
+    background-color: #121212;
     color: white;
   }
   .dark-mode .block-projects-fun h4 {
@@ -87,22 +87,22 @@ body {
   }
 
   .dark-mode .block-achievements {
-    background-color: #1f1f1f;
+    background-color: #121212;
     color: white;
   }
 
   .dark-mode .block-skills {
-    background-color: #1f1f1f;
+    background-color: #121212;
     color: white;
   }
 
   .dark-mode .block-game{
-    background-color: #1f1f1f;
+    background-color: #121212;
     color: white;
   }
   
   .dark-mode .block-modes {
-    background-color: #1f1f1f;
+    background-color: #121212;
     color: white;
   }
 
@@ -111,7 +111,7 @@ body {
   }
 
   .dark-mode .block-mode:hover{
-    background-color: #1f1f1f;
+    background-color: #121212;
   }
 
   .dark-mode .resume-button button{
@@ -127,6 +127,10 @@ body {
 
   .dark-mode .resume-button button:hover {
     background-color: #000000;
+  }
+
+  .dark-mode .block-social-icons {
+    background-color: #1f1f1f00;
   }
   
   /*----------------------------------------First Column----------------------------------------*/
@@ -151,7 +155,6 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
-    /* add a curve to the edges */
     border-radius: 16px;
     position: relative; 
     min-height: 160px;
@@ -161,12 +164,12 @@ body {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    height: 100px; /* Set the height of the flex container */
-    width: auto; /* Set the width of the flex container */
-    position: absolute; /* Position relative to the parent .profile */
-    top: 0; /* Align to the top of the parent */
-    left: 0; /* Align to the left of the parent */
-    right: 0; /* Align to the right of the parent */
+    height: 100px; 
+    width: auto; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0;
     overflow: hidden;
   } 
 
@@ -178,22 +181,22 @@ body {
   }
 
   .profile-icon {
-    position: absolute; /* Position relative to the parent .block */
-    top: 23px; /* Distance from the top of the parent */
-    left: 25px; /* Distance from the left of the parent */
-    width: 40px; /* Diameter of the circle */
-    height: 40px; /* Diameter of the circle */
-    border-radius: 50%; /* Makes the element round */
-    overflow: hidden; /* Ensures that the image is clipped to the circle */
+    position: absolute; 
+    top: 23px; 
+    left: 25px; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    overflow: hidden; 
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .profile-icon img {
-    width: 100%; /* Ensures the image fills the container */
-    height: 100%; /* Ensures the image fills the container */
-    object-fit: cover; /* Keeps the aspect ratio of the image */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
   }
 
   .profile-name h4{
@@ -337,10 +340,10 @@ body {
     left: 2px;
     font-weight: bold;
     font-size: 31px;
-    background: linear-gradient(45deg, #0090E1, #05BCB1); /* Adjust the gradient colors and angle as needed */
-    -webkit-background-clip: text; /* Makes the background gradient apply to the text */
-    -webkit-text-fill-color: transparent; /* Makes the text color transparent so the gradient shows through */
-    background-clip: text; /* Standard property to ensure compatibility */
+    background: linear-gradient(45deg, #0090E1, #05BCB1);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
     width: fit-content;
   }
   
@@ -378,15 +381,15 @@ body {
     border-radius: 16px;
     position: relative;
     min-width: 46.5%;
-    max-width: 100%; /* Ensures it doesn't exceed the width of the container */
-    height: 200px; /* Minimum height to ensure it starts at 200px */
-    max-height: 50vh; /* Maximum height to control how responsive the height can be */
-    box-sizing: border-box; /* Ensures padding and border are included in the height */
+    max-width: 100%; 
+    height: 200px; 
+    max-height: 50vh; 
+    box-sizing: border-box; 
     flex: 1;
     text-decoration: none;
   }
   .block-projects-fun .projects-funfacts-icon img {
-    cursor: pointer; /* Indicate that the icon is clickable */
+    cursor: pointer;
   }
 
   .block-projects-fun h4 {
@@ -394,7 +397,7 @@ body {
     font-size: 14px;
     color: #4b4b4b;
     position: relative;
-    z-index: 2; /* Ensure the text is above the pseudo-element */
+    z-index: 2; 
     transition: transform 0.3s ease;
     position: relative;
     top: 38px;
@@ -412,7 +415,6 @@ body {
   
   .projects, .fun-facts {
     flex: 1 1 40%;
-    /* Ensure each takes up 40% of the space in the flex container */
   }
 
   .projects {
@@ -439,11 +441,11 @@ body {
   .projects-funfacts-icon img {
     width: 100%;
     height: 100%;
-    transition: transform 0.2s ease-out; /* Smooth transition effect */
+    transition: transform 0.2s ease-out;
   }
 
   .projects-funfacts-icon img:hover {
-    transform: scale(1.2); /* Slightly increase the size of the image */
+    transform: scale(1.2); 
   }
 
   .fun-facts {
@@ -532,9 +534,9 @@ body {
     border-radius: 16px;
     position: relative;
     min-height: 90px;
-    overflow: hidden; /* Ensure the pseudo-element does not overflow */
-    animation: backgroundToggle 40s ease infinite; /* Animation for toggling background */
-    animation-delay: 6s; /* Delay before starting the backgroundToggle animation */
+    overflow: hidden; 
+    animation: backgroundToggle 40s ease infinite; 
+    animation-delay: 6s; 
     position: relative;
  }
   
@@ -585,7 +587,7 @@ body {
     background: linear-gradient(70deg, rgba(0, 141, 221, 0.5), rgba(98, 42, 189, 0.5));
     transform: rotate(45deg);
     animation: rotateLine 20s linear infinite;
-    z-index: 1; /* Ensure it's above the background but below the text */
+    z-index: 1; 
   }
   
   /* Animation for the rotating line */
@@ -604,7 +606,7 @@ body {
     font-size: 20px;
     color: #dadada;
     position: relative;
-    z-index: 2; /* Ensure the text is above the pseudo-element */
+    z-index: 2; 
     transition: transform 0.3s ease;
   }
   
@@ -641,7 +643,7 @@ body {
     position: absolute;
     left: 80px;
     display: flex;
-    align-items: center; /* Align the text and image vertically */
+    align-items: center;
   }
   
   .block-updates h5:hover span:first-child {
@@ -666,7 +668,7 @@ body {
   grid-column: 2 / 3;
   grid-row: 2 / 5;
   height: 100%; 
-  position: relative; /* Ensure proper positioning for child elements */
+  position: relative;
 }
 
 /* Ensure the .block-main-content covers the entire area */
@@ -679,7 +681,7 @@ body {
   padding: 0px;
   border-radius: 16px;
   position: relative;
-  height: 100%; /* Adjust to fill the parent container */
+  height: 100%; 
 }
 
 /* Ensure the .carousel-container fills its parent */
@@ -700,14 +702,14 @@ body {
   background-size: cover;
   position: absolute;
   transition: opacity 0.5s ease;
-  opacity: 0; /* Default opacity */
+  opacity: 0;
   border-radius: 16px;
 }
 
 /* Current image */
 .carousel-image.current {
   opacity: 1;
-  animation: none; /* No animation */
+  animation: none; 
 }
 
 /* Image entering */
@@ -728,12 +730,11 @@ body {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  padding: 5px; /* Space between dots and container border */
+  padding: 5px; /* Padding around dots */
   
   /* Box around all dots */
-  border-radius: 20px; /* Rounded corners */
+  border-radius: 20px; 
   background-color: #4b4b4b6c;
-  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.877); Subtle shadow around the container */
 }
 
 /* Dot navigation */
@@ -754,9 +755,9 @@ body {
 
 /* Active dot */
 .dot.active {
-  background-color: #008ddd; /* Active dot color */
+  background-color: #008ddd; 
   
-  /* Slight scale effect for emphasis */
+  
   transform: scale(1.2);
 }
 
@@ -792,16 +793,16 @@ body {
 
 /* Apply custom easing to animation */
 .carousel-image.entering {
-  animation: slideIn 0.9s cubic-bezier(0.6, 0, 0.58, 1) forwards; /* Increased duration to 1s */
+  animation: slideIn 0.9s cubic-bezier(0.6, 0, 0.58, 1) forwards; 
 }
 
 .carousel-image.exiting {
-  animation: slideOut 0.9s cubic-bezier(0.6, 0, 0.58, 1) forwards; /* Increased duration to 1s */
+  animation: slideOut 0.9s cubic-bezier(0.6, 0, 0.58, 1) forwards; 
 }
 
 .carousel-image.entering,
 .carousel-image.exiting {
-  animation-fill-mode: forwards; /* Keeps the styles of the last keyframe */
+  animation-fill-mode: forwards;
 }
 
 
@@ -811,15 +812,15 @@ body {
 
 .social-game-container {
   display: flex;
-  justify-content: center; /* Center the container horizontally */
+  justify-content: center;
   height: 150px;
 }
 
 .block-social-icons {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  justify-content: start; /* Center items horizontally */
-  gap: 20px; /* Add gap between each icon */
+  flex-wrap: wrap;
+  justify-content: start; 
+  gap: 20px; 
   padding: 10px;
   position: relative;
   top: 7px;
@@ -827,14 +828,14 @@ body {
 }
 
 .skill-icon {
-  width: 40px; /* Adjust the size of icons */
-  height: 40px; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure images are not distorted */
-  transition: transform 0.2s ease; /* Smooth transition effect */
+  width: 40px; 
+  height: 40px; 
+  object-fit: cover; 
+  transition: transform 0.2s ease; 
 }
 
 .skill-icon:hover {
-  transform: scale(1.3); /* Scale the icon to 120% of its original size */
+  transform: scale(1.3); 
 }
   
 /* Button styles */
@@ -869,9 +870,9 @@ body {
   overflow: hidden;
   padding: 0.8rem 3rem;
   position: relative;
-  border: 2px solid transparent; /* Add border for animation effect */
+  border: 2px solid transparent; 
   transition: color 0.2s ease, border-color 0.2s ease;
-  z-index: 2; /* Ensure button text is on top */
+  z-index: 2; 
 }
 
 .btn-12:disabled {
@@ -911,7 +912,7 @@ body {
   position: absolute;
   transform: translateY(var(--progress, 100%));
   transition: transform 0.2s ease;
-  z-index: -1; /* Ensure gradient is below the text */
+  z-index: -1; 
 }
 
 .btn-12:after {
@@ -926,7 +927,7 @@ body {
     transparent 75%,
     #fff 0
   );
-  z-index: -1; /* Ensure gradient is below the text */
+  z-index: -1; 
 }
 
 .btn-12:hover:after,
@@ -979,9 +980,9 @@ body {
     padding: 20px;
     border-radius: 16px;
     position: relative;
-    height: 300px; /* Adjust as needed */
-    width: 89.5%; /* Adjust as needed */
-    overflow: hidden; /* Ensure children do not overflow the rounded corners */
+    height: 300px; 
+    width: 89.5%;
+    overflow: hidden; 
   }
   
   .map-component {
@@ -991,8 +992,8 @@ body {
     top: 0;
     left: 0;
     transition: transform 0.3s ease;
-    transform-origin: center; /* Ensure scaling happens from the center */
-    image-rendering: -webkit-optimize-contrast; /* Higher quality scaling */
+    transform-origin: center;
+    image-rendering: -webkit-optimize-contrast; 
   }
   
   /* Hide the attribution text */
@@ -1024,7 +1025,7 @@ body {
     padding: 20px;
     border-radius: 16px;
     position: relative; 
-    height: 70px;
+    height: 30px;
     width: 89.5%;
   }
   
@@ -1046,7 +1047,7 @@ body {
   
   .pic, .another-pic {
     flex: 1 1 40%;
-    /* Ensure each takes up 40% of the space in the flex container */
+    
   }
 
   .block-pic {
@@ -1055,22 +1056,22 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0; /* Remove padding to ensure image fits exactly */
+    padding: 0; 
     border-radius: 16px;
     position: relative; 
-    height: 200px;
+    height: 250px;
     width: 100%;
-    overflow: hidden; /* Ensure any overflow is hidden */
+    overflow: hidden;
   }
 
 .block-pic img {
-    width: 100%; /* Make the image take up the full width of the container */
-    height: 100%; /* Make the image take up the full height of the container */
-    object-fit: cover; /* Ensure the image covers the container while maintaining its aspect ratio */
-    border-radius: 16px; /* Match the container's border radius */
-    position: absolute; /* Position absolutely within the container */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 16px; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
 }
 .block-another-pic {
   background-color: #fafafa;
@@ -1078,50 +1079,15 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0; /* Remove padding to ensure image fits exactly */
+  padding: 0; 
   border-radius: 16px;
   position: relative; 
   height: 200px;
   width: 48%;
-  overflow: hidden; /* Ensure any overflow is hidden */
+  overflow: hidden; 
 }
   
-/* Styling for the block containing the image slider */
-.block-2nd-pic {
-  background-color: #fafafa; /* Or any other background color you want */
-  overflow: hidden; /* Ensure overflow is hidden */
-  border-radius: 16px;
-  height: 300px; /* Adjust as needed */
-  width: 100%; /* Take full width of its container */
-}
 
-.image-slider {
-  overflow: hidden;
-  width: 100%;
-  height: 300px; /* Adjust height as needed */
-  position: relative;
-}
-
-.image-slider-wrapper {
-  display: flex;
-  width: 100%; /* The width will be controlled dynamically by JavaScript */
-  height: 100%;
-  transition: transform 1s ease-in-out; /* Smooth transition for sliding effect */
-}
-
-.image-slide {
-  flex: 0 0 100%; /* Each slide takes full width of the slider */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* Full height of the slider */
-}
-
-.image-slide img {
-  width: 100%; /* Fit image to the slide */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure image covers the slide */
-}
 
 
 
@@ -1160,8 +1126,8 @@ body {
   border-radius: 16px;
   position: relative; 
   height: 60px;
-  width: 340px; /* Adjust width as needed */
-  border: 2px solid #ccc; /* Border for styling */
+  width: 340px; 
+  border: 2px solid #ccc; 
 }
 
 .mode-icon {
@@ -1177,11 +1143,11 @@ body {
 
 .mode-toggle {
   position: absolute;
-  width: 50%; /* The sliding button will take half the parent width */
+  width: 50%; 
   height: 100%;
   background-color: #ffffff;
   border-radius: 16px;
-  transition: all 0.3s ease; /* Smooth transition */
+  transition: all 0.3s ease;
   z-index: 1;
 }
 
@@ -1190,7 +1156,7 @@ body {
 }
 
 .mode-toggle.dark-mode {
-  left: 50%; /* Move to the right side */
+  left: 50%;
 }
 
 .mode-icon {
@@ -1234,7 +1200,7 @@ body {
 
   @media (min-height: 910px) {
     .block-projects-fun {
-      min-height: 30vh; /* Adjust for smaller screens */
+      min-height: 30vh;
     }
     .block-another-pic, .block-pic{
       min-height: 30vh;
@@ -1248,24 +1214,24 @@ body {
   
   @media (max-width: 800px) {
     .block-projects-fun {
-      max-height: 40vh; /* Further adjust for even smaller screens */
+      max-height: 40vh; 
     }
   }
   
   @media (max-width: 500px) {
     .block-projects-fun {
-      max-height: 20vh; /* Adjust for very small screens */
+      max-height: 20vh; 
     }
 
   }
   /* Adjust height based on viewport height */
   @media (max-height: 932px) {
     .block-projects-fun {
-      max-height: 1vh; /* Adjust height for smaller screens */
+      max-height: 1vh; 
     }
 
     .projects, .fun-facts {
-      min-height: 10px; /* Adjust to maintain proportion */
+      min-height: 10px; 
     }
   }
 

@@ -121,9 +121,10 @@ const HomePage = () => {
         </div>
         <div className="block-game">
         <div className="block game">
-            <Link to="/game" className="btn-link">
-              <button className="btn-12">Enjoy A Game</button>
-            </Link>
+          Made with ❤️ by Muhammad Inshal Farid
+            {/* <Link to="/game" className="btn-link">
+              <button className="btn-12">Crack the Code</button>
+            </Link> */}
         </div>
         </div>
         <div className='pics-container'>

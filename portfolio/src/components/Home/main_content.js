@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './HomePage.css'; // Import your CSS file if needed
 import images from '../../images/index'; // Adjust the path as needed
 
-const imageArray = [images.ice_bear, images.nature, images.kitty];
+const imageArray = [images.morris_worm, images.al_Khwarizmi, images.ice_bear, images.nature, images.kitty];
 
 function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
