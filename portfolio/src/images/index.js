@@ -47,6 +47,7 @@ import Penpal from './projects/Penpal.png';
 import morris_worm from './main_content/morris_worm.webp';
 import al_Khwarizmi from './main_content/al_Khwarizmi.webp';
 import robo_hand from './main_content/robo_hand.jpg';
+import aot from './aot.webp';
 
 const images = {
   pic,
@@ -98,6 +99,7 @@ const images = {
   morris_worm,
   al_Khwarizmi,
   robo_hand,
+  aot,
 };
 
 export default images;

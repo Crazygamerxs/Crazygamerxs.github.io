@@ -17,9 +17,9 @@ function AboutMeApp() {
                 </div>
                 <div className="box">
                     <div className="box-title">FAVORITE SHOW</div>
-                    <img src={images.bojack} alt="Favorite Show" className="box-image" />
-                    <p className="box-text-2a" style={{ right: '140px' }}>Bojack Horseman</p>
-                    <p className="box-text-2b" style={{ right: '149px' }}>Raphael Bob-Waksberg</p>
+                    <img src={images.aot} alt="Favorite Show" className="box-image" />
+                    <p className="box-text-2a" style={{ right: '140px' }}>Attack on Titan</p>
+                    <p className="box-text-2b" style={{ right: '149px' }}>Hajime Isayama</p>
                 </div>
                 <div className="box">
                     <div className="box-title">FAVORITE GAME</div>
@@ -31,7 +31,7 @@ function AboutMeApp() {
                     <div className="box-title">ACTIVE HOBBY</div>
                     <img src={images.chess} alt="Active Hobby" className="box-image" />
                     <p className="box-text-2a">Chess</p>
-                    <p className="box-text-2b">Elo-Rating 800</p>
+                    <p className="box-text-2b">Elo-Rating 1400</p>
                 </div>
             </div>
         </div>
