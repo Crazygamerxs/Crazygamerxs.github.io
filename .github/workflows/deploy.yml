@@ -2,9 +2,9 @@ name: Deploy React App
 
 on:
   push:
-    branches: [main]
+    branches: [New_Website]
   pull_request:
-    branches: [main]
+    branches: [New_Website]
 
 permissions:
   contents: write
