@@ -5,6 +5,7 @@ import Projects from './components/Projects/Projects'; // Adjust the import path
 import AboutMeApp from './components/About_Me/aboutMe';
 import Game from './components/Game/Game'; 
 
+// start of the App.js
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
