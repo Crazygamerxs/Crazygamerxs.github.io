@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.64524106.css",
-    "main.js": "/static/js/main.887dc322.js",
+    "main.js": "/static/js/main.28147acc.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/Chess.jpg": "/static/media/Chess.96f766b2eda0a40b5710.jpg",
     "static/media/ice_bear.jpg": "/static/media/ice_bear.0f1606732af0af4d5384.jpg",
@@ -26,11 +26,11 @@
     "static/media/funFactsIcon.png": "/static/media/funFactsIcon.a128f1e2b76c39dee4ba.png",
     "index.html": "/index.html",
     "main.64524106.css.map": "/static/css/main.64524106.css.map",
-    "main.887dc322.js.map": "/static/js/main.887dc322.js.map",
+    "main.28147acc.js.map": "/static/js/main.28147acc.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.64524106.css",
-    "static/js/main.887dc322.js"
+    "static/js/main.28147acc.js"
   ]
 }
