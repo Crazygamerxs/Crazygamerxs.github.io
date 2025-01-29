@@ -14,22 +14,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
           cache: "npm"
+          cache-dependency-path: portfolio/package-lock.json
+
+      - name: Navigate to portfolio directory and show contents
+        run: |
+          cd portfolio
+          pwd
+          ls -la
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd portfolio
+          npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+          cd portfolio
+          CI=false npm run build
+
+      - name: Create CNAME file
+        run: |
+          cd portfolio
+          echo "minshal.co" > build/CNAME
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build
+          folder: portfolio/build
           branch: gh-pages
+          clean: true
