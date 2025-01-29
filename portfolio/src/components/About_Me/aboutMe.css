@@ -1,151 +1,229 @@
+/* aboutMe.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Geist', Arial, sans-serif;
     background-color: #f1f1f1;
     margin: 0;
     padding: 0;
-    overflow-y: visible; /* Prevent horizontal scrolling */
+    overflow-y: visible;
 }
 
 h1 {
-    color: rgb(61, 64, 60);
-    font-size: 51px;
-    font-weight: lighter;
+    color: #2d3436;
+    font-size: 48px;
+    font-weight: 600;
     position: relative;
-    top: 60px;
-    left: 300px;
-    font-family: Stringer, "Times New Roman", sans-serif;
+    text-align: center;
+    margin: 60px 0;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
 }
 
 /* Boxes Container */
 .boxes-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
-    column-gap: 40px; /* Space between boxes */
-    row-gap: 120px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
     padding: 20px;
-    max-width: 900px; /* Adjust as needed */
+    max-width: 1200px;
     margin: 0 auto;
-    position: relative;
-    top: 40px;
-    left: 10px;
 }
 
 .box {
-    background-color: #e8e8e3;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 300px;
-    width: 420px;
-    overflow: visible;
+    height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards;
+}
+
+.box:nth-child(1) { animation-delay: 0.1s; }
+.box:nth-child(2) { animation-delay: 0.2s; }
+.box:nth-child(3) { animation-delay: 0.3s; }
+.box:nth-child(4) { animation-delay: 0.4s; }
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .box-title {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    font-weight: lighter;
-    background-color: #cfcfcf;
-    padding: 6px;
-    border-radius: 16px;
-    font-family: "Geist Mono", Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    font-style: normal;
-    color: rgb(79, 86, 77);
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 2;
 }
 
 .box-image {
-    max-width: 100%;
-    max-height: 80%; /* Adjust as needed */
+    width: 100%;
+    height: 60%;
     object-fit: cover;
-    border-radius: 16px;
-    position: relative;
-    top: 50px;
+    transition: transform 0.5s ease;
 }
 
-.box-image:hover {
-    transform: scale(1.1);
-    transition: transform 0.5s;
+/* First box (Vagabond) */
+.box:nth-child(1) .box-image {
+    object-position: center 0%;
 }
 
-.box-text-1a {
-    text-align: left;
-    margin-top: 10px;
-    color: rgb(61, 64, 60);
-    font-size: 16px;
-    position: relative;
-    top: 90px;
-    right: 180px;
-    font-size: 20px;
-    font-family: Geist, Arial, sans-serif;
+/* Second box (Attack on Titan) */
+.box:nth-child(2) .box-image {
+    object-position: center 35%;
+}
+
+/* Third box (Elden Ring) */
+.box:nth-child(3) .box-image {
+    object-position: center 65%;
+}
+
+/* Fourth box (Chess) */
+.box:nth-child(4) .box-image {
+    object-position: center 30%;
+}
+
+.box:hover .box-image {
+    transform: scale(1.05);
+}
+
+.box-content {
+    padding: 20px;
+    background: linear-gradient(0deg, #ffffff 70%, transparent);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.box-text-1a, .box-text-2a {
+    font-size: 24px;
     font-weight: 700;
+    color: #2d3436;
+    margin: 0 0 5px 0;
 }
 
-.box-text-1b{
-    font-family: Geist, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    position: relative;
-    top: 65px;
-    right: 178px;
-    color: rgb(61, 64, 60);
-    align-items: start;
-    text-align: left;
-}
-
-.box-text-2a {
-    text-align: left;
-    margin-top: 10px;
-    color: rgb(61, 64, 60);
+.box-text-1b, .box-text-2b {
     font-size: 16px;
-    position: relative;
-    top: 90px;
-    right: 190px;
-    font-size: 20px;
-    font-family: Geist, Arial, sans-serif;
-    font-weight: 700;
+    color: #636e72;
+    margin: 0 0 10px 0;
 }
 
-.box-text-2b{
-    font-family: Geist, Arial, sans-serif;
+.box-description {
     font-size: 14px;
-    font-weight: 500;
-    position: relative;
-    top: 65px;
-    right: 172px;
-    color: rgb(61, 64, 60);
-    align-items: start;
-    text-align: left;
-    padding-bottom: 50px; 
+    color: #636e72;
+    line-height: 1.6;
+    margin: 0;
 }
 
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* Dark Mode */
-
 .dark-mode {
-    background-color: #191919;
-} 
+    background-color: #1a1a1a;
+}
 
 .dark-mode h1 {
     color: #ffffff;
 }
 
 .dark-mode .box {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #2d3436;
 }
 
 .dark-mode .box-title {
-    background-color: #333;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .box-text-1a,
+.dark-mode .box-text-2a {
     color: #ffffff;
 }
 
-.dark-mode .box-text-1a, .dark-mode .box-text-1b, .dark-mode .box-text-2a, .dark-mode .box-text-2b {
-    color: #ffffff;
+.dark-mode .box-text-1b,
+.dark-mode .box-text-2b,
+.dark-mode .box-description {
+    color: #b2bec3;
+}
+
+.dark-mode .box-content {
+    background: linear-gradient(0deg, #2d3436 70%, transparent);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .boxes-container {
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .box {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        margin: 40px 0;
+    }
+
+    .boxes-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .box {
+        height: 300px;
+    }
+
+    .box-text-1a,
+    .box-text-2a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        height: 280px;
+    }
+
+    .box-title {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .box-description {
+        font-size: 12px;
+    }
 }

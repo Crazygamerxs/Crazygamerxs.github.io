@@ -8,7 +8,6 @@ import facts from './facts.json'; // make sure the path is correct
 import SkillsContainer from './skillscontainer';
 import ToggleModeButton from './ToggleModeButton'; // Adjust the path as needed
 
-
 const HomePage = () => {
   const [randomFact, setRandomFact] = useState('');
 
@@ -55,8 +54,18 @@ const HomePage = () => {
             <img src={images.githubIcon} alt="Github Icon" />
           </a>
           <div className="resume-button">
-            <button onClick={() => window.open('path-to-resume.pdf', '_blank')}>Download Resume</button>
-          </div>
+    <button onClick={() => {
+        const link = document.createElement('a');
+        link.href = '/Resume_2025.pdf';  // Directly accessible from public folder
+        link.download = 'Resume_2025.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }}>
+        Download Resume
+    </button>
+</div>
+
         </div>
       </div>
       <div className="block-job-status">
@@ -129,7 +138,7 @@ const HomePage = () => {
         </div>
         <div className='pics-container'>
           <div className="block-pic">
-            <img src={images.kitty} alt="Me" />
+            <img src={images.murphy} alt="Me" />
           </div>
           
         </div>

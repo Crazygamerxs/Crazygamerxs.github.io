@@ -51,11 +51,11 @@ function Projects() {
               alt="Current"
               className="main-image"
             />
-            <img
+            {/* <img
               src={images.open_icon}
               alt="Open Icon"
               className="open-icon"
-            />
+            /> */}
             <div className="skills-container">
               {imageArray[currentImageIndex].skills.map((skill, index) => (
                 <div key={index} className="skill-box">{skill}</div>
@@ -76,18 +76,28 @@ function Projects() {
           </div>
         </div>
         <div className="button-container">
-            <button className="previous-button" onClick={previousImage}>
-                <img src={images.leftarrow} alt="Left Arrow" />
-                <span style={{ marginTop: '6px' }}>Back</span>
-            </button>
-          <div className="line-container">
-            <div className="line"></div>
-            <div className="progress-line" style={{ width: `${progressWidth}%` }}></div>
+          <button 
+            className="navigation-button previous-button" 
+            onClick={previousImage}
+          >
+            <img src={images.leftarrow} alt="Previous" />
+            <span>Previous</span>
+          </button>
+          
+          <div className="progress-container">
+            <div 
+              className="progress-line" 
+              style={{ width: `${progressWidth}%` }}
+            />
           </div>
-            <button className="next-button" onClick={nextImage}>
-              <span style={{ marginTop: '6px',marginLeft: '2px'}}>Next</span>
-              <img src={images.rightarrow} alt="Right Arrow" />
-            </button>
+          
+          <button 
+            className="navigation-button next-button" 
+            onClick={nextImage}
+          >
+            <span>Next</span>
+            <img src={images.rightarrow} alt="Next" />
+          </button>
         </div>
       </div>
     </div>

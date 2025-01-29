@@ -48,6 +48,9 @@ import morris_worm from './main_content/morris_worm.webp';
 import al_Khwarizmi from './main_content/al_Khwarizmi.webp';
 import robo_hand from './main_content/robo_hand.jpg';
 import aot from './aot.webp';
+import murphy from './murphy.jpg';
+import vagabond2 from './vagabond2.jpg';
+import elden from './Elden.png';
 
 const images = {
   pic,
@@ -100,6 +103,9 @@ const images = {
   al_Khwarizmi,
   robo_hand,
   aot,
+  murphy,
+  vagabond2,
+  elden
 };
 
 export default images;
