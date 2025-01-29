@@ -78,11 +78,11 @@ function Projects() {
               alt="Current"
               className="main-image"
             />
-            <img
+            {/* <img
               src={images.open_icon}
               alt="Open Icon"
               className="open-icon"
-            />
+            /> */}
             <div className="skills-container">
               {imageArray[currentImageIndex].skills.map((skill, index) => (
                 <div key={index} className="skill-box">{skill}</div>
