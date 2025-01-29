@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TopBar from '../Common/topBar';
-import images from '../../images/index';
-import './Projects.css';
+import images from '../../images/index'; // Adjust the import path as needed
+import './Projects.css'; 
 
 const imageArray = [
   { 
@@ -49,10 +49,6 @@ function Projects() {
     );
   };
 
-  const handleImageClick = () => {
-    window.open(imageArray[currentImageIndex].link, '_blank');
-  };
-
   const progressWidth = (currentImageIndex + 1) / imageArray.length * 100;
 
   return (
@@ -72,7 +68,7 @@ function Projects() {
               ))}
             </div>
           </div>
-          <div className="main-image-container" onClick={handleImageClick} style={{ cursor: 'pointer' }}>
+          <div className="main-image-container">
             <img
               src={imageArray[currentImageIndex].src}
               alt="Current"
@@ -103,17 +99,27 @@ function Projects() {
           </div>
         </div>
         <div className="button-container">
-          <button className="previous-button" onClick={previousImage}>
-            <img src={images.leftarrow} alt="Left Arrow" />
-            <span style={{ marginTop: '6px' }}>Back</span>
+          <button 
+            className="navigation-button previous-button" 
+            onClick={previousImage}
+          >
+            <img src={images.leftarrow} alt="Previous" />
+            <span>Previous</span>
           </button>
-          <div className="line-container">
-            <div className="line"></div>
-            <div className="progress-line" style={{ width: `${progressWidth}%` }}></div>
+          
+          <div className="progress-container">
+            <div 
+              className="progress-line" 
+              style={{ width: `${progressWidth}%` }}
+            />
           </div>
-          <button className="next-button" onClick={nextImage}>
-            <span style={{ marginTop: '6px', marginLeft: '2px'}}>Next</span>
-            <img src={images.rightarrow} alt="Right Arrow" />
+          
+          <button 
+            className="navigation-button next-button" 
+            onClick={nextImage}
+          >
+            <span>Next</span>
+            <img src={images.rightarrow} alt="Next" />
           </button>
         </div>
       </div>
