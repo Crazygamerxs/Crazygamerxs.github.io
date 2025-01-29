@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.64524106.css",
+    "main.js": "/static/js/main.cfb5f067.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/Chess.jpg": "/static/media/Chess.96f766b2eda0a40b5710.jpg",
+    "static/media/ice_bear.jpg": "/static/media/ice_bear.0f1606732af0af4d5384.jpg",
+    "static/media/Elden.png": "/static/media/Elden.1572a7144a95182d7996.png",
+    "static/media/robo_hand.jpg": "/static/media/robo_hand.a23610c22cd88748c6ed.jpg",
+    "static/media/vagabond2.jpg": "/static/media/vagabond2.1c0254f27bc31fa8836b.jpg",
+    "static/media/aot.webp": "/static/media/aot.12d4ea86dfd6abd721d2.webp",
+    "static/media/eldenring.jpg": "/static/media/eldenring.b46d5e5d995e01bc8878.jpg",
+    "static/media/bojack.jpg": "/static/media/bojack.2cd1883e7819e445d936.jpg",
+    "static/media/murphy.jpg": "/static/media/murphy.2bd09968ecd2e6797d23.jpg",
+    "static/media/civfix.png": "/static/media/civfix.4b275a579b3ae30a0a8e.png",
+    "static/media/vagabond.jpg": "/static/media/vagabond.2cbcc8667fe725b4f8bb.jpg",
+    "static/media/nature.jpg": "/static/media/nature.37e9911185d1a5ddbf03.jpg",
+    "static/media/al_Khwarizmi.webp": "/static/media/al_Khwarizmi.c18522ad002ab269d7d4.webp",
+    "static/media/nature2.jpg": "/static/media/nature2.81434ad4e9d5f9ab6886.jpg",
+    "static/media/Penpal.png": "/static/media/Penpal.53ec80bfbdd07e2d663d.png",
+    "static/media/Camsentinel.png": "/static/media/Camsentinel.02fde6e691069bcf581b.png",
+    "static/media/kitty.jpg": "/static/media/kitty.b64d7e7787fb98851bd0.jpg",
+    "static/media/morris_worm.webp": "/static/media/morris_worm.994283548b005dc4f3a6.webp",
+    "static/media/dreamspace.png": "/static/media/dreamspace.8342a5133cf84b78d857.png",
+    "static/media/tuxania.png": "/static/media/tuxania.612df90da39274b3f103.png",
+    "static/media/funFactsIcon.png": "/static/media/funFactsIcon.a128f1e2b76c39dee4ba.png",
+    "index.html": "/index.html",
+    "main.64524106.css.map": "/static/css/main.64524106.css.map",
+    "main.cfb5f067.js.map": "/static/js/main.cfb5f067.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64524106.css",
+    "static/js/main.cfb5f067.js"
+  ]
+}
