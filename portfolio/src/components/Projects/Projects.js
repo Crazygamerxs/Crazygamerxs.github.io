@@ -49,6 +49,10 @@ function Projects() {
     );
   };
 
+  const handleImageClick = () => {
+    window.open(imageArray[currentImageIndex].link, '_blank');
+  };
+
   const progressWidth = (currentImageIndex + 1) / imageArray.length * 100;
 
   return (
@@ -68,7 +72,7 @@ function Projects() {
               ))}
             </div>
           </div>
-          <div className="main-image-container">
+          <div className="main-image-container" onClick={handleImageClick} style={{ cursor: 'pointer' }}>
             <img
               src={imageArray[currentImageIndex].src}
               alt="Current"
